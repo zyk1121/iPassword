@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "ASIKit/ASIKit.h"
 
 @interface AppDelegate ()
 
@@ -19,12 +20,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // 初始化基础设施
+    [self setupASIData];
+    
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)setupASIData
+{
+    [ASIS3Request setSharedSecretAccessKey:@"d4fddd9651543a77bf4a8bc193a17e274bab2a65"];
+    [ASIS3Request setSharedAccessKey:@"1iepdwyugVJeCduZ2Zdx"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
