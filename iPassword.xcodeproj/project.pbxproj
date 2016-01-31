@@ -13,12 +13,23 @@
 		B4E070F21C5CA84300E6A0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E070EB1C5CA84300E6A0F6 /* LaunchScreen.storyboard */; };
 		B4E070F31C5CA84300E6A0F6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E070ED1C5CA84300E6A0F6 /* Info.plist */; };
 		B4E070F41C5CA84300E6A0F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E070EE1C5CA84300E6A0F6 /* main.m */; };
-		B4E070F51C5CA84300E6A0F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E070F01C5CA84300E6A0F6 /* ViewController.m */; };
 		B4E070FA1C5CAC8E00E6A0F6 /* ASIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E070F91C5CAC8E00E6A0F6 /* ASIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B4E070FC1C5CADC300E6A0F6 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E070FB1C5CADC300E6A0F6 /* libxml2.tbd */; };
 		B4E070FE1C5CADDE00E6A0F6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E070FD1C5CADDE00E6A0F6 /* libz.tbd */; };
 		B4E071001C5CADF600E6A0F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E070FF1C5CADF600E6A0F6 /* SystemConfiguration.framework */; };
 		B4E071021C5CAE0900E6A0F6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E071011C5CAE0900E6A0F6 /* MobileCoreServices.framework */; };
+		B4E071091C5DD2C100E6A0F6 /* PADAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071081C5DD2C100E6A0F6 /* PADAccountView.m */; };
+		B4E0710F1C5DD8EA00E6A0F6 /* PADMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E0710C1C5DD8EA00E6A0F6 /* PADMineViewController.m */; };
+		B4E071121C5DD92200E6A0F6 /* PADSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071111C5DD92200E6A0F6 /* PADSettingViewController.m */; };
+		B4E071171C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E071131C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png */; };
+		B4E071181C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E071141C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png */; };
+		B4E071191C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E071151C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png */; };
+		B4E0711A1C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E071161C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png */; };
+		B4E0711D1C5DDC0F00E6A0F6 /* PADUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E0711C1C5DDC0F00E6A0F6 /* PADUser.m */; };
+		B4E0711F1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E0711E1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png */; };
+		B4E071221C5E27DD00E6A0F6 /* PADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071211C5E27DD00E6A0F6 /* PADLoginViewController.m */; };
+		B4E071251C5E2DD500E6A0F6 /* PADBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071241C5E2DD500E6A0F6 /* PADBaseViewController.m */; };
+		B4E071281C5E2F7000E6A0F6 /* PADLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071271C5E2F7000E6A0F6 /* PADLoginView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +44,31 @@
 		B4E070EC1C5CA84300E6A0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4E070ED1C5CA84300E6A0F6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4E070EE1C5CA84300E6A0F6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B4E070EF1C5CA84300E6A0F6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B4E070F01C5CA84300E6A0F6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B4E070F91C5CAC8E00E6A0F6 /* ASIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ASIKit.framework; sourceTree = "<group>"; };
 		B4E070FB1C5CADC300E6A0F6 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		B4E070FD1C5CADDE00E6A0F6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B4E070FF1C5CADF600E6A0F6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B4E071011C5CAE0900E6A0F6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B4E071031C5DAF8400E6A0F6 /* PADUIKitMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PADUIKitMacros.h; sourceTree = "<group>"; };
+		B4E071071C5DD2C100E6A0F6 /* PADAccountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADAccountView.h; sourceTree = "<group>"; };
+		B4E071081C5DD2C100E6A0F6 /* PADAccountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADAccountView.m; sourceTree = "<group>"; };
+		B4E0710B1C5DD8EA00E6A0F6 /* PADMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADMineViewController.h; sourceTree = "<group>"; };
+		B4E0710C1C5DD8EA00E6A0F6 /* PADMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADMineViewController.m; sourceTree = "<group>"; };
+		B4E071101C5DD92200E6A0F6 /* PADSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADSettingViewController.h; sourceTree = "<group>"; };
+		B4E071111C5DD92200E6A0F6 /* PADSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADSettingViewController.m; sourceTree = "<group>"; };
+		B4E071131C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_mine_selected@2x.png"; sourceTree = "<group>"; };
+		B4E071141C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_mine@2x.png"; sourceTree = "<group>"; };
+		B4E071151C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_misc_selected@2x.png"; sourceTree = "<group>"; };
+		B4E071161C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_misc@2x.png"; sourceTree = "<group>"; };
+		B4E0711B1C5DDC0F00E6A0F6 /* PADUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADUser.h; sourceTree = "<group>"; };
+		B4E0711C1C5DDC0F00E6A0F6 /* PADUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADUser.m; sourceTree = "<group>"; };
+		B4E0711E1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_mine_default_portrait@2x.png"; sourceTree = "<group>"; };
+		B4E071201C5E27DD00E6A0F6 /* PADLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADLoginViewController.h; sourceTree = "<group>"; };
+		B4E071211C5E27DD00E6A0F6 /* PADLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADLoginViewController.m; sourceTree = "<group>"; };
+		B4E071231C5E2DD500E6A0F6 /* PADBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADBaseViewController.h; sourceTree = "<group>"; };
+		B4E071241C5E2DD500E6A0F6 /* PADBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADBaseViewController.m; sourceTree = "<group>"; };
+		B4E071261C5E2F7000E6A0F6 /* PADLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADLoginView.h; sourceTree = "<group>"; };
+		B4E071271C5E2F7000E6A0F6 /* PADLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADLoginView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +156,6 @@
 				B4E070EB1C5CA84300E6A0F6 /* LaunchScreen.storyboard */,
 				B4E070ED1C5CA84300E6A0F6 /* Info.plist */,
 				B4E070EE1C5CA84300E6A0F6 /* main.m */,
-				B4E070EF1C5CA84300E6A0F6 /* ViewController.h */,
-				B4E070F01C5CA84300E6A0F6 /* ViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -136,6 +163,12 @@
 		B4E070F61C5CA85000E6A0F6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B4E0710A1C5DD8EA00E6A0F6 /* Mine */,
+				B4E0710D1C5DD8EA00E6A0F6 /* Setting */,
+				B4E071061C5DD2C100E6A0F6 /* Account */,
+				B4E071031C5DAF8400E6A0F6 /* PADUIKitMacros.h */,
+				B4E071231C5E2DD500E6A0F6 /* PADBaseViewController.h */,
+				B4E071241C5E2DD500E6A0F6 /* PADBaseViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -143,6 +176,11 @@
 		B4E070F71C5CA86800E6A0F6 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				B4E071131C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png */,
+				B4E071141C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png */,
+				B4E071151C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png */,
+				B4E071161C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png */,
+				B4E0711E1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -153,6 +191,39 @@
 				B4E070F91C5CAC8E00E6A0F6 /* ASIKit.framework */,
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		B4E071061C5DD2C100E6A0F6 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				B4E071071C5DD2C100E6A0F6 /* PADAccountView.h */,
+				B4E071081C5DD2C100E6A0F6 /* PADAccountView.m */,
+				B4E0711B1C5DDC0F00E6A0F6 /* PADUser.h */,
+				B4E0711C1C5DDC0F00E6A0F6 /* PADUser.m */,
+				B4E071201C5E27DD00E6A0F6 /* PADLoginViewController.h */,
+				B4E071211C5E27DD00E6A0F6 /* PADLoginViewController.m */,
+				B4E071261C5E2F7000E6A0F6 /* PADLoginView.h */,
+				B4E071271C5E2F7000E6A0F6 /* PADLoginView.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		B4E0710A1C5DD8EA00E6A0F6 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				B4E0710B1C5DD8EA00E6A0F6 /* PADMineViewController.h */,
+				B4E0710C1C5DD8EA00E6A0F6 /* PADMineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		B4E0710D1C5DD8EA00E6A0F6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B4E071101C5DD92200E6A0F6 /* PADSettingViewController.h */,
+				B4E071111C5DD92200E6A0F6 /* PADSettingViewController.m */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +287,12 @@
 			files = (
 				B4C8A8131C5CA5B80057EA62 /* Assets.xcassets in Resources */,
 				B4E070F21C5CA84300E6A0F6 /* LaunchScreen.storyboard in Resources */,
+				B4E071191C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png in Resources */,
+				B4E071171C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png in Resources */,
 				B4E070F31C5CA84300E6A0F6 /* Info.plist in Resources */,
+				B4E0711F1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png in Resources */,
+				B4E0711A1C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png in Resources */,
+				B4E071181C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E071091C5DD2C100E6A0F6 /* PADAccountView.m in Sources */,
+				B4E071251C5E2DD500E6A0F6 /* PADBaseViewController.m in Sources */,
 				B4E070F11C5CA84300E6A0F6 /* AppDelegate.m in Sources */,
+				B4E071121C5DD92200E6A0F6 /* PADSettingViewController.m in Sources */,
+				B4E071221C5E27DD00E6A0F6 /* PADLoginViewController.m in Sources */,
 				B4E070F41C5CA84300E6A0F6 /* main.m in Sources */,
-				B4E070F51C5CA84300E6A0F6 /* ViewController.m in Sources */,
+				B4E0711D1C5DDC0F00E6A0F6 /* PADUser.m in Sources */,
+				B4E071281C5E2F7000E6A0F6 /* PADLoginView.m in Sources */,
+				B4E0710F1C5DD8EA00E6A0F6 /* PADMineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,10 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "PADMineViewController.h"
+#import "PADSettingViewController.h"
 #import "ASIKit/ASIKit.h"
 
+
 @interface AppDelegate ()
+
+@property (nonatomic, strong) UITabBarController *tabBarController;
 
 @end
 
@@ -22,13 +26,41 @@
     
     // 初始化基础设施
     [self setupASIData];
+
+    // 初始化页面
+    [self setupTabbarController];
     
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = navController;
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)setupTabbarController
+{
+    self.tabBarController = [[UITabBarController alloc] init];
+    
+    PADMineViewController *mineViewController = [[PADMineViewController alloc] initWithNibName:nil bundle:nil];
+    PADSettingViewController *settingViewController = [[PADSettingViewController alloc] initWithNibName:nil bundle:nil];
+    
+    UINavigationController *mineNavController = [[UINavigationController alloc] initWithRootViewController:mineViewController];
+    UINavigationController *settingNavController = [[UINavigationController alloc] initWithRootViewController:settingViewController];
+    
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:mineNavController, settingNavController, nil];
+    
+    UITabBar *tabBar = self.tabBarController.tabBar;
+    UITabBarItem *tabItem1 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabItem2 = [tabBar.items objectAtIndex:1];
+    
+    tabItem1.title = @"我的";
+    tabItem2.title = @"设置";
+    
+    tabItem1.image = [UIImage imageNamed:@"icon_tabbar_mine"];
+    tabItem2.image = [UIImage imageNamed:@"icon_tabbar_misc"];
+    
+    tabItem1.selectedImage = [[UIImage imageNamed:@"icon_tabbar_mine_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tabItem2.selectedImage = [[UIImage imageNamed:@"icon_tabbar_misc_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
 - (void)setupASIData

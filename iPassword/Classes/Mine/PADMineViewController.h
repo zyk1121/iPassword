@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PADMineViewController.h
 //  iPassword
 //
 //  Created by zhangyuanke on 16/1/30.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PADBaseViewController.h"
 
-@interface ViewController : UIViewController
+@interface PADMineViewController : PADBaseViewController
 
 @end
-
