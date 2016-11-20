@@ -8,7 +8,6 @@
 
 #import "PADMineViewController.h"
 #import "Masonry.h"
-#import "ASIKit/ASIKit.h"
 #import "PADUIKitMacros.h"
 #import "PADAccountView.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
@@ -133,7 +132,8 @@
 //        NSLog(@"%@",[[request error] localizedDescription]);
 //    }
     /*示例为获取http://my-bucket.sinastorage.cn/path/to/the/object的object信息*/
-    
+   
+    /*
     NSString *bucket = @"bucket-kdtm";
     NSString *path = @"/data/user/contents/user.json";
     
@@ -148,6 +148,7 @@
     } else {
         NSLog(@"%@",[[request error] localizedDescription]);
     }
+     */
     
     
 }

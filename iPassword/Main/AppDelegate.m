@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "PADMineViewController.h"
 #import "PADSettingViewController.h"
-#import "ASIKit/ASIKit.h"
 
 
 @interface AppDelegate ()
@@ -20,7 +19,7 @@
 
 @implementation AppDelegate
 
-
+// 启动页->(新特性、广告（闪屏）)->登录->Main页面
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
@@ -65,8 +64,7 @@
 
 - (void)setupASIData
 {
-    [ASIS3Request setSharedSecretAccessKey:@"d4fddd9651543a77bf4a8bc193a17e274bab2a65"];
-    [ASIS3Request setSharedAccessKey:@"1iepdwyugVJeCduZ2Zdx"];
+ 
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
