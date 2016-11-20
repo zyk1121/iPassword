@@ -15,6 +15,9 @@
 #import "PADLoginViewController.h"
 #import "PADPassword.h"
 #import "PADEditPasswordViewController.h"
+#import "PADUser.h"
+#import "NSString+Hash.h"
+#import "NSData+AES.h"
 
 @interface PADMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -31,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的";
+    [PADUser defaultUser].userID = @"zyk1121";
     [self loadData];
     [self setupUI];
 }
@@ -40,6 +44,7 @@
     self.passData = [[NSMutableArray alloc] init];
     // 从本地加载数据
     PADPassword *pass = [[PADPassword alloc] init];
+    
     pass.website = @"百度文库";
     pass.account = @"zyk1121";
     pass.password = @"cyy1122";
@@ -53,7 +58,111 @@
     pass2.password = @"cyy1122";
     pass2.reserved = @"备注信息";
     [self.passData addObject:pass2];
+    
+    [self readDataFromFile];
+//    [self writeDataToFile];
 }
+
+- (void)readDataFromFile
+{
+    NSString *homeDirectory = NSHomeDirectory();
+    NSString *key = @"#zykpunycyy#2211";
+    NSString *filepath = [NSString stringWithFormat:@"%@/Documents/%@",homeDirectory,[[PADUser defaultUser].userID md5String]];
+    FILE *fp = fopen([filepath cStringUsingEncoding:NSUTF8StringEncoding], "rb");
+    fseek(fp, 0, SEEK_END);
+    unsigned int fileLen = (unsigned int)ftell(fp);
+    fseek(fp, 0, SEEK_SET);
+    unsigned char buf[2] = {0};
+    fread(buf, 2, 1, fp);
+    unsigned int len = 0;
+    fread(&len, sizeof(unsigned int), 1, fp);
+    unsigned char *bufData = (unsigned char *)malloc(len * sizeof(char) + 1);
+    memset(bufData, 0, len+1);
+    fread(bufData, len, 1, fp);
+    NSData *userID = [NSData dataWithBytes:bufData length:len];
+    NSString *userIDStr = [userID AES256DecryptWithKey_Str:key];
+    [PADUser defaultUser].userID = userIDStr;
+    free(bufData);
+    bufData = NULL;
+    unsigned int fileCurLen = (unsigned int)ftell(fp);
+    [self.passData removeAllObjects];
+    while (fileCurLen < fileLen - 2) {
+        // 读取一个Pass数据
+        // 长度
+        fread(&len, sizeof(unsigned int), 1, fp);
+        unsigned char *bufData = (unsigned char *)malloc(len * sizeof(char) + 1);
+        memset(bufData, 0, len+1);
+        fread(bufData, len, 1, fp);
+    
+        NSData *tempData = [NSData dataWithBytes:bufData length:len];
+        
+        id passwordDic = [NSJSONSerialization JSONObjectWithData:[tempData AES256DecryptWithKey:key] options:0 error:nil];
+        if (passwordDic && [passwordDic isKindOfClass:[NSDictionary class]]) {
+            PADPassword *password = [[PADPassword alloc] init];
+            password.website = [passwordDic objectForKey:@"website"];
+            password.account = [passwordDic objectForKey:@"account"];
+            password.password = [passwordDic objectForKey:@"password"];
+            password.reserved = [passwordDic objectForKey:@"reserved"];
+            [self.passData addObject:password];
+        }
+        
+        fileCurLen = (unsigned int)ftell(fp);
+    }
+    
+    fclose(fp);
+}
+
+- (void)writeDataToFile
+{
+    if ([[PADUser defaultUser].userID length] > 0) {
+        NSString *homeDirectory = NSHomeDirectory();
+        NSString *filepath = [NSString stringWithFormat:@"%@/Documents/%@",homeDirectory,[[PADUser defaultUser].userID md5String]];
+        FILE *fp = fopen([filepath cStringUsingEncoding:NSUTF8StringEncoding], "wb");
+        unsigned char buf[2] = {0xff,0xfe};
+        fwrite(buf, 2, 1, fp);
+        // ID加密
+        NSString *key = @"#zykpunycyy#2211";
+        // 加密
+        NSData *resultData = [[PADUser defaultUser].userID AES256EncryptWithKey:key];
+        if (resultData) {
+            unsigned int length = (unsigned int)[resultData length];
+            fwrite(&length, sizeof(unsigned int), 1, fp);
+            fwrite([resultData bytes], resultData.length, 1, fp);
+        } else {
+            fclose(fp);
+            return;
+        }
+        //
+        [self.passData enumerateObjectsUsingBlock:^(PADPassword*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSData *data = [self dataFromPassword:obj];
+            unsigned int length = (unsigned int)[data length];
+            fwrite(&length, sizeof(unsigned int), 1, fp);
+            fwrite(data.bytes, length, 1, fp);
+        }];
+        fwrite(buf, 2, 1, fp);
+        fclose(fp);
+    }
+}
+
+- (NSData *)dataFromPassword:(PADPassword *)password
+{
+    NSData *data = nil;
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+    // website
+    [dic setObject:password.website ? password.website : @"" forKey:@"website"];
+    [dic setObject:password.account ? password.account : @"" forKey:@"account"];
+    [dic setObject:password.password ? password.password : @"" forKey:@"password"];
+    [dic setObject:password.reserved ? password.reserved : @"" forKey:@"reserved"];
+    NSError *parseError = nil;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+    
+    NSString *key = @"#zykpunycyy#2211";
+    data = [jsonData AES256EncryptWithKey:key];
+    
+    return data;
+}
+
 
 - (void)setupUI
 {

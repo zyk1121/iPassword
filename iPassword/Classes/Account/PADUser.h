@@ -10,7 +10,7 @@
 
 @interface PADUser : NSObject
 
-@property (nonatomic, strong) NSString *userID;
+@property (nonatomic, copy) NSString *userID;
 
 + (PADUser *)defaultUser;
 

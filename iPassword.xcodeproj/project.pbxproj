@@ -13,6 +13,11 @@
 		76804D7F1DE17B1F00D72453 /* PADPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D7E1DE17B1F00D72453 /* PADPassword.m */; };
 		76804D811DE1852D00D72453 /* icon_add.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76804D801DE1852D00D72453 /* icon_add.jpg */; };
 		76804D841DE18A6C00D72453 /* PADEditPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D831DE18A6C00D72453 /* PADEditPasswordViewController.m */; };
+		76804D911DE1AB8600D72453 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D861DE1AB8600D72453 /* NSData+Base64.m */; };
+		76804D921DE1AB8600D72453 /* GzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D891DE1AB8600D72453 /* GzipUtility.m */; };
+		76804D941DE1AB8600D72453 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D8D1DE1AB8600D72453 /* RSA.m */; };
+		76804D951DE1AB8600D72453 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D901DE1AB8600D72453 /* NSString+Hash.m */; };
+		76804D981DE1ABF500D72453 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D971DE1ABF500D72453 /* NSData+AES.m */; };
 		B4C8A8131C5CA5B80057EA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C8A8121C5CA5B80057EA62 /* Assets.xcassets */; };
 		B4E070F11C5CA84300E6A0F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E070EA1C5CA84300E6A0F6 /* AppDelegate.m */; };
 		B4E070F21C5CA84300E6A0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E070EB1C5CA84300E6A0F6 /* LaunchScreen.storyboard */; };
@@ -47,6 +52,16 @@
 		76804D801DE1852D00D72453 /* icon_add.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon_add.jpg; sourceTree = "<group>"; };
 		76804D821DE18A6C00D72453 /* PADEditPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADEditPasswordViewController.h; sourceTree = "<group>"; };
 		76804D831DE18A6C00D72453 /* PADEditPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADEditPasswordViewController.m; sourceTree = "<group>"; };
+		76804D851DE1AB8600D72453 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		76804D861DE1AB8600D72453 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		76804D881DE1AB8600D72453 /* GzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzipUtility.h; sourceTree = "<group>"; };
+		76804D891DE1AB8600D72453 /* GzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzipUtility.m; sourceTree = "<group>"; };
+		76804D8C1DE1AB8600D72453 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		76804D8D1DE1AB8600D72453 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		76804D8F1DE1AB8600D72453 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		76804D901DE1AB8600D72453 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		76804D961DE1ABF500D72453 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		76804D971DE1ABF500D72453 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
 		B4C8A8031C5CA5B80057EA62 /* iPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C8A8071C5CA5B80057EA62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C8A8121C5CA5B80057EA62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +135,27 @@
 				4BC02493F3FAAC508DBC4AE7 /* Pods-iPassword.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		76804D871DE1AB8600D72453 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				76804D881DE1AB8600D72453 /* GzipUtility.h */,
+				76804D891DE1AB8600D72453 /* GzipUtility.m */,
+				76804D8C1DE1AB8600D72453 /* RSA.h */,
+				76804D8D1DE1AB8600D72453 /* RSA.m */,
+				76804D8E1DE1AB8600D72453 /* Security */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
+		76804D8E1DE1AB8600D72453 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				76804D8F1DE1AB8600D72453 /* NSString+Hash.h */,
+				76804D901DE1AB8600D72453 /* NSString+Hash.m */,
+			);
+			path = Security;
 			sourceTree = "<group>";
 		};
 		B4C8A7FA1C5CA5B80057EA62 = {
@@ -224,6 +260,11 @@
 		B4E0710A1C5DD8EA00E6A0F6 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				76804D961DE1ABF500D72453 /* NSData+AES.h */,
+				76804D971DE1ABF500D72453 /* NSData+AES.m */,
+				76804D851DE1AB8600D72453 /* NSData+Base64.h */,
+				76804D861DE1AB8600D72453 /* NSData+Base64.m */,
+				76804D871DE1AB8600D72453 /* RSA */,
 				B4E0710B1C5DD8EA00E6A0F6 /* PADMineViewController.h */,
 				B4E0710C1C5DD8EA00E6A0F6 /* PADMineViewController.m */,
 				76804D7D1DE17B1F00D72453 /* PADPassword.h */,
@@ -357,14 +398,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				76804D7F1DE17B1F00D72453 /* PADPassword.m in Sources */,
+				76804D951DE1AB8600D72453 /* NSString+Hash.m in Sources */,
 				B4E071091C5DD2C100E6A0F6 /* PADAccountView.m in Sources */,
 				B4E071251C5E2DD500E6A0F6 /* PADBaseViewController.m in Sources */,
 				B4E070F11C5CA84300E6A0F6 /* AppDelegate.m in Sources */,
 				76804D841DE18A6C00D72453 /* PADEditPasswordViewController.m in Sources */,
+				76804D981DE1ABF500D72453 /* NSData+AES.m in Sources */,
+				76804D941DE1AB8600D72453 /* RSA.m in Sources */,
+				76804D911DE1AB8600D72453 /* NSData+Base64.m in Sources */,
 				B4E071121C5DD92200E6A0F6 /* PADSettingViewController.m in Sources */,
 				B4E071221C5E27DD00E6A0F6 /* PADLoginViewController.m in Sources */,
 				B4E070F41C5CA84300E6A0F6 /* main.m in Sources */,
 				B4E0711D1C5DDC0F00E6A0F6 /* PADUser.m in Sources */,
+				76804D921DE1AB8600D72453 /* GzipUtility.m in Sources */,
 				B4E071281C5E2F7000E6A0F6 /* PADLoginView.m in Sources */,
 				B4E0710F1C5DD8EA00E6A0F6 /* PADMineViewController.m in Sources */,
 			);
