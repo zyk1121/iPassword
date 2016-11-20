@@ -97,8 +97,24 @@
         [self.contentView addSubview:tableView];
         tableView;
     });
+  
+    
+    UIBarButtonItem *updateBtn=[[UIBarButtonItem alloc] initWithTitle:@"更新" style:UIBarButtonItemStylePlain target:self action:@selector(updateBtnClicked)];
+    UIBarButtonItem *backupBtn=[[UIBarButtonItem alloc] initWithTitle:@"备份" style:UIBarButtonItemStylePlain  target:self action:@selector(backupBtnClicked)];
+    NSArray *rightBtns=[NSArray arrayWithObjects:backupBtn,updateBtn, nil];
+    self.navigationItem.rightBarButtonItems=rightBtns;
 
     [self.view setNeedsUpdateConstraints];
+}
+
+- (void)updateBtnClicked
+{
+
+}
+
+- (void)backupBtnClicked
+{
+    
 }
 
 - (void)updateViewConstraints
