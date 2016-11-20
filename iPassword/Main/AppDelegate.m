@@ -9,11 +9,12 @@
 #import "AppDelegate.h"
 #import "PADMineViewController.h"
 #import "PADSettingViewController.h"
+#import "PADLoginViewController.h"
 
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) UITabBarController *tabBarController;
+
 
 @end
 
@@ -22,15 +23,14 @@
 // 启动页->(新特性、广告（闪屏）)->登录->Main页面
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    // 初始化基础设施
-    [self setupASIData];
 
+    PADLoginViewController *loginVC = [[PADLoginViewController alloc] init];
+     UINavigationController *loginNavController = [[UINavigationController alloc] initWithRootViewController:loginVC];
     // 初始化页面
     [self setupTabbarController];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = self.tabBarController;
+    self.window.rootViewController = loginNavController;
     [self.window makeKeyAndVisible];
     
     return YES;

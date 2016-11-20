@@ -26,6 +26,7 @@ static PADUser *defaultUser;
     self = [super init];
     if (self) {
         _userID = nil;
+        _accessToken = nil;
     }
     return self;
 }

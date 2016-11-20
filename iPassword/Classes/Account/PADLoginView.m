@@ -31,7 +31,7 @@
         _userNameTextField = ({
             UITextField *textField = [[UITextField alloc] init];
             textField.textColor = [UIColor colorWithWhite:0.2 alpha:1];
-            textField.font = [UIFont systemFontOfSize:15];
+            textField.font = [UIFont systemFontOfSize:20];
             textField.delegate = self;
             [textField addTarget:self action:@selector(textDidChangeForUserName:) forControlEvents:UIControlEventEditingChanged];
             textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -43,6 +43,7 @@
             textField.clearButtonMode = UITextFieldViewModeWhileEditing;
             textField.rightViewMode = UITextFieldViewModeUnlessEditing;
             textField.keyboardType = UIKeyboardTypeDefault;
+            textField.placeholder = @"请输入大于6个字符的账号";
             textField;
         });
         [self addSubview:_userNameTextField];
@@ -71,7 +72,7 @@
         _passwordTextField = ({
             UITextField *textField = [[UITextField alloc] init];
             textField.textColor = [UIColor colorWithWhite:0.2 alpha:1];
-            textField.font = [UIFont systemFontOfSize:15];
+            textField.font = [UIFont systemFontOfSize:20];
             textField.delegate = self;
             [textField addTarget:self action:@selector(textDidChangeForPassword:) forControlEvents:UIControlEventEditingChanged];
             textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -83,6 +84,7 @@
             textField.clearButtonMode = UITextFieldViewModeWhileEditing;
             textField.rightViewMode = UITextFieldViewModeUnlessEditing;
             textField.keyboardType = UIKeyboardTypeDefault;
+            textField.placeholder = @"请输入大于6个字符的密码";
             textField;
         });
         [self addSubview:_passwordTextField];

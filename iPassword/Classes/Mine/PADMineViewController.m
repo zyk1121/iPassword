@@ -35,6 +35,7 @@
     [super viewDidLoad];
     self.title = @"我的";
     [PADUser defaultUser].userID = @"zyk1121";
+    [PADUser defaultUser].password = @"cyy1122";
     [self loadData];
     [self setupUI];
 }
@@ -59,8 +60,9 @@
     pass2.reserved = @"备注信息";
     [self.passData addObject:pass2];
     
-    [self readDataFromFile];
+//
 //    [self writeDataToFile];
+//    [self readDataFromFile];
 }
 
 - (void)readDataFromFile
@@ -84,6 +86,19 @@
     [PADUser defaultUser].userID = userIDStr;
     free(bufData);
     bufData = NULL;
+    
+    // 密码
+    len = 0;
+    fread(&len, sizeof(unsigned int), 1, fp);
+    bufData = (unsigned char *)malloc(len * sizeof(char) + 1);
+    memset(bufData, 0, len+1);
+    fread(bufData, len, 1, fp);
+    NSData *passwordData = [NSData dataWithBytes:bufData length:len];
+    NSString *passwordStr = [passwordData AES256DecryptWithKey_Str:key];
+    [PADUser defaultUser].password = passwordStr;
+    free(bufData);
+    bufData = NULL;
+    
     unsigned int fileCurLen = (unsigned int)ftell(fp);
     [self.passData removeAllObjects];
     while (fileCurLen < fileLen - 2) {
@@ -112,6 +127,7 @@
     fclose(fp);
 }
 
+// 7xrj8s.com1.z0.glb.clouddn.com
 - (void)writeDataToFile
 {
     if ([[PADUser defaultUser].userID length] > 0) {
@@ -124,6 +140,16 @@
         NSString *key = @"#zykpunycyy#2211";
         // 加密
         NSData *resultData = [[PADUser defaultUser].userID AES256EncryptWithKey:key];
+        if (resultData) {
+            unsigned int length = (unsigned int)[resultData length];
+            fwrite(&length, sizeof(unsigned int), 1, fp);
+            fwrite([resultData bytes], resultData.length, 1, fp);
+        } else {
+            fclose(fp);
+            return;
+        }
+        // 密码
+        resultData = [[PADUser defaultUser].password AES256EncryptWithKey:key];
         if (resultData) {
             unsigned int length = (unsigned int)[resultData length];
             fwrite(&length, sizeof(unsigned int), 1, fp);
