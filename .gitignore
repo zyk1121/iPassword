@@ -17,6 +17,16 @@ DerivedData
 !default.perspectivev3
 xcuserdata
 
+## Various settings
+xcuserdata/
+
+
+.DS_Store
+Podfile.lock
+Pods/*
+build/*
+Products/*
+
 ## Other
 *.xccheckout
 *.moved-aside

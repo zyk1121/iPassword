@@ -3,299 +3,169 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		507C2FC69C7FDAB52B91D426 /* libPods-iPassword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 286C3B3F92C08175775BC351 /* libPods-iPassword.a */; };
-		763BF4EF1DE171B500FA8FDD /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 763BF4EE1DE171B500FA8FDD /* libz.1.2.8.tbd */; };
-		763BF4F11DE171BD00FA8FDD /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 763BF4F01DE171BD00FA8FDD /* libstdc++.6.0.9.tbd */; };
-		76804D7F1DE17B1F00D72453 /* PADPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D7E1DE17B1F00D72453 /* PADPassword.m */; };
-		76804D811DE1852D00D72453 /* icon_add.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76804D801DE1852D00D72453 /* icon_add.jpg */; };
-		76804D841DE18A6C00D72453 /* PADEditPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D831DE18A6C00D72453 /* PADEditPasswordViewController.m */; };
-		76804D911DE1AB8600D72453 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D861DE1AB8600D72453 /* NSData+Base64.m */; };
-		76804D921DE1AB8600D72453 /* GzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D891DE1AB8600D72453 /* GzipUtility.m */; };
-		76804D941DE1AB8600D72453 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D8D1DE1AB8600D72453 /* RSA.m */; };
-		76804D951DE1AB8600D72453 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D901DE1AB8600D72453 /* NSString+Hash.m */; };
-		76804D981DE1ABF500D72453 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 76804D971DE1ABF500D72453 /* NSData+AES.m */; };
-		B4C8A8131C5CA5B80057EA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C8A8121C5CA5B80057EA62 /* Assets.xcassets */; };
-		B4E070F11C5CA84300E6A0F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E070EA1C5CA84300E6A0F6 /* AppDelegate.m */; };
-		B4E070F21C5CA84300E6A0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E070EB1C5CA84300E6A0F6 /* LaunchScreen.storyboard */; };
-		B4E070F31C5CA84300E6A0F6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E070ED1C5CA84300E6A0F6 /* Info.plist */; };
-		B4E070F41C5CA84300E6A0F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E070EE1C5CA84300E6A0F6 /* main.m */; };
-		B4E070FC1C5CADC300E6A0F6 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E070FB1C5CADC300E6A0F6 /* libxml2.tbd */; };
-		B4E070FE1C5CADDE00E6A0F6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E070FD1C5CADDE00E6A0F6 /* libz.tbd */; };
-		B4E071001C5CADF600E6A0F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E070FF1C5CADF600E6A0F6 /* SystemConfiguration.framework */; };
-		B4E071021C5CAE0900E6A0F6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E071011C5CAE0900E6A0F6 /* MobileCoreServices.framework */; };
-		B4E071091C5DD2C100E6A0F6 /* PADAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071081C5DD2C100E6A0F6 /* PADAccountView.m */; };
-		B4E0710F1C5DD8EA00E6A0F6 /* PADMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E0710C1C5DD8EA00E6A0F6 /* PADMineViewController.m */; };
-		B4E071121C5DD92200E6A0F6 /* PADSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071111C5DD92200E6A0F6 /* PADSettingViewController.m */; };
-		B4E071171C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E071131C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png */; };
-		B4E071181C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E071141C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png */; };
-		B4E071191C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E071151C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png */; };
-		B4E0711A1C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E071161C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png */; };
-		B4E0711D1C5DDC0F00E6A0F6 /* PADUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E0711C1C5DDC0F00E6A0F6 /* PADUser.m */; };
-		B4E0711F1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E0711E1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png */; };
-		B4E071221C5E27DD00E6A0F6 /* PADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071211C5E27DD00E6A0F6 /* PADLoginViewController.m */; };
-		B4E071251C5E2DD500E6A0F6 /* PADBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071241C5E2DD500E6A0F6 /* PADBaseViewController.m */; };
-		B4E071281C5E2F7000E6A0F6 /* PADLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E071271C5E2F7000E6A0F6 /* PADLoginView.m */; };
+		76138E8720E8788C0006A086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138E8620E8788C0006A086 /* AppDelegate.swift */; };
+		76138E8E20E8788D0006A086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76138E8D20E8788D0006A086 /* Assets.xcassets */; };
+		76138E9120E8788D0006A086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76138E8F20E8788D0006A086 /* LaunchScreen.storyboard */; };
+		76138E9C20E87B3F0006A086 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138E9B20E87B3F0006A086 /* MainViewController.swift */; };
+		76138E9E20E87BA80006A086 /* YKNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138E9D20E87BA80006A086 /* YKNavigationViewController.swift */; };
+		76138EA020E87BBF0006A086 /* YKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138E9F20E87BBF0006A086 /* YKBaseViewController.swift */; };
+		76138EA220E87BDB0006A086 /* YKBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EA120E87BDB0006A086 /* YKBaseView.swift */; };
+		76138EA720E87D170006A086 /* libiPassSecure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EA520E87D170006A086 /* libiPassSecure.a */; };
+		76138EA820E87D170006A086 /* pub_key in Resources */ = {isa = PBXBuildFile; fileRef = 76138EA620E87D170006A086 /* pub_key */; };
+		76138EAE20E87DFA0006A086 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EAD20E87DFA0006A086 /* libstdc++.tbd */; };
+		76138EB020E87E050006A086 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EAF20E87E040006A086 /* Security.framework */; };
+		76138EB220E87E2D0006A086 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EB120E87E2C0006A086 /* libz.tbd */; };
+		76138EB420E87E370006A086 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EB320E87E370006A086 /* MobileCoreServices.framework */; };
+		AEA3D46006EE7B6C08A7B5E1 /* Pods_iPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9278C8E2FE4341D2C7887C /* Pods_iPassword.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		286C3B3F92C08175775BC351 /* libPods-iPassword.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iPassword.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BC02493F3FAAC508DBC4AE7 /* Pods-iPassword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.release.xcconfig"; sourceTree = "<group>"; };
-		5C8EF8C4F7D32A73AD4B1834 /* Pods-iPassword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.debug.xcconfig"; sourceTree = "<group>"; };
-		763BF4EE1DE171B500FA8FDD /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
-		763BF4F01DE171BD00FA8FDD /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
-		76804D7D1DE17B1F00D72453 /* PADPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADPassword.h; sourceTree = "<group>"; };
-		76804D7E1DE17B1F00D72453 /* PADPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADPassword.m; sourceTree = "<group>"; };
-		76804D801DE1852D00D72453 /* icon_add.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon_add.jpg; sourceTree = "<group>"; };
-		76804D821DE18A6C00D72453 /* PADEditPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADEditPasswordViewController.h; sourceTree = "<group>"; };
-		76804D831DE18A6C00D72453 /* PADEditPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADEditPasswordViewController.m; sourceTree = "<group>"; };
-		76804D851DE1AB8600D72453 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		76804D861DE1AB8600D72453 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		76804D881DE1AB8600D72453 /* GzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzipUtility.h; sourceTree = "<group>"; };
-		76804D891DE1AB8600D72453 /* GzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzipUtility.m; sourceTree = "<group>"; };
-		76804D8C1DE1AB8600D72453 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
-		76804D8D1DE1AB8600D72453 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
-		76804D8F1DE1AB8600D72453 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		76804D901DE1AB8600D72453 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
-		76804D961DE1ABF500D72453 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
-		76804D971DE1ABF500D72453 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
-		B4C8A8031C5CA5B80057EA62 /* iPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4C8A8071C5CA5B80057EA62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B4C8A8121C5CA5B80057EA62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B4E070E91C5CA84300E6A0F6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B4E070EA1C5CA84300E6A0F6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B4E070EC1C5CA84300E6A0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B4E070ED1C5CA84300E6A0F6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4E070EE1C5CA84300E6A0F6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B4E070FB1C5CADC300E6A0F6 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		B4E070FD1C5CADDE00E6A0F6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B4E070FF1C5CADF600E6A0F6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		B4E071011C5CAE0900E6A0F6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		B4E071031C5DAF8400E6A0F6 /* PADUIKitMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PADUIKitMacros.h; sourceTree = "<group>"; };
-		B4E071071C5DD2C100E6A0F6 /* PADAccountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADAccountView.h; sourceTree = "<group>"; };
-		B4E071081C5DD2C100E6A0F6 /* PADAccountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADAccountView.m; sourceTree = "<group>"; };
-		B4E0710B1C5DD8EA00E6A0F6 /* PADMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADMineViewController.h; sourceTree = "<group>"; };
-		B4E0710C1C5DD8EA00E6A0F6 /* PADMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADMineViewController.m; sourceTree = "<group>"; };
-		B4E071101C5DD92200E6A0F6 /* PADSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADSettingViewController.h; sourceTree = "<group>"; };
-		B4E071111C5DD92200E6A0F6 /* PADSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADSettingViewController.m; sourceTree = "<group>"; };
-		B4E071131C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_mine_selected@2x.png"; sourceTree = "<group>"; };
-		B4E071141C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_mine@2x.png"; sourceTree = "<group>"; };
-		B4E071151C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_misc_selected@2x.png"; sourceTree = "<group>"; };
-		B4E071161C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_misc@2x.png"; sourceTree = "<group>"; };
-		B4E0711B1C5DDC0F00E6A0F6 /* PADUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADUser.h; sourceTree = "<group>"; };
-		B4E0711C1C5DDC0F00E6A0F6 /* PADUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADUser.m; sourceTree = "<group>"; };
-		B4E0711E1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_mine_default_portrait@2x.png"; sourceTree = "<group>"; };
-		B4E071201C5E27DD00E6A0F6 /* PADLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADLoginViewController.h; sourceTree = "<group>"; };
-		B4E071211C5E27DD00E6A0F6 /* PADLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADLoginViewController.m; sourceTree = "<group>"; };
-		B4E071231C5E2DD500E6A0F6 /* PADBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADBaseViewController.h; sourceTree = "<group>"; };
-		B4E071241C5E2DD500E6A0F6 /* PADBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADBaseViewController.m; sourceTree = "<group>"; };
-		B4E071261C5E2F7000E6A0F6 /* PADLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADLoginView.h; sourceTree = "<group>"; };
-		B4E071271C5E2F7000E6A0F6 /* PADLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADLoginView.m; sourceTree = "<group>"; };
+		4C9278C8E2FE4341D2C7887C /* Pods_iPassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76138E8320E8788C0006A086 /* iPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76138E8620E8788C0006A086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76138E8D20E8788D0006A086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76138E9020E8788D0006A086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76138E9220E8788D0006A086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76138E9B20E87B3F0006A086 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		76138E9D20E87BA80006A086 /* YKNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKNavigationViewController.swift; sourceTree = "<group>"; };
+		76138E9F20E87BBF0006A086 /* YKBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKBaseViewController.swift; sourceTree = "<group>"; };
+		76138EA120E87BDB0006A086 /* YKBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKBaseView.swift; sourceTree = "<group>"; };
+		76138EA420E87D170006A086 /* iPassSecure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPassSecure.h; sourceTree = "<group>"; };
+		76138EA520E87D170006A086 /* libiPassSecure.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiPassSecure.a; sourceTree = "<group>"; };
+		76138EA620E87D170006A086 /* pub_key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pub_key; sourceTree = "<group>"; };
+		76138EA920E87D400006A086 /* iPassword-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPassword-Bridging-Header.h"; sourceTree = "<group>"; };
+		76138EAD20E87DFA0006A086 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		76138EAF20E87E040006A086 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		76138EB120E87E2C0006A086 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		76138EB320E87E370006A086 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C2AC88992134EF70FE0FE8E2 /* Pods-iPassword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.release.xcconfig"; sourceTree = "<group>"; };
+		E01544F1226995D380ADF276 /* Pods-iPassword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B4C8A8001C5CA5B80057EA62 /* Frameworks */ = {
+		76138E8020E8788C0006A086 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				763BF4F11DE171BD00FA8FDD /* libstdc++.6.0.9.tbd in Frameworks */,
-				763BF4EF1DE171B500FA8FDD /* libz.1.2.8.tbd in Frameworks */,
-				B4E071021C5CAE0900E6A0F6 /* MobileCoreServices.framework in Frameworks */,
-				B4E071001C5CADF600E6A0F6 /* SystemConfiguration.framework in Frameworks */,
-				B4E070FE1C5CADDE00E6A0F6 /* libz.tbd in Frameworks */,
-				B4E070FC1C5CADC300E6A0F6 /* libxml2.tbd in Frameworks */,
-				507C2FC69C7FDAB52B91D426 /* libPods-iPassword.a in Frameworks */,
+				76138EB420E87E370006A086 /* MobileCoreServices.framework in Frameworks */,
+				76138EB220E87E2D0006A086 /* libz.tbd in Frameworks */,
+				76138EB020E87E050006A086 /* Security.framework in Frameworks */,
+				76138EAE20E87DFA0006A086 /* libstdc++.tbd in Frameworks */,
+				AEA3D46006EE7B6C08A7B5E1 /* Pods_iPassword.framework in Frameworks */,
+				76138EA720E87D170006A086 /* libiPassSecure.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A71F390C71914784D0FA74A /* Frameworks */ = {
+		76138E7A20E8788C0006A086 = {
 			isa = PBXGroup;
 			children = (
-				763BF4F01DE171BD00FA8FDD /* libstdc++.6.0.9.tbd */,
-				763BF4EE1DE171B500FA8FDD /* libz.1.2.8.tbd */,
-				B4E071011C5CAE0900E6A0F6 /* MobileCoreServices.framework */,
-				B4E070FF1C5CADF600E6A0F6 /* SystemConfiguration.framework */,
-				B4E070FD1C5CADDE00E6A0F6 /* libz.tbd */,
-				B4E070FB1C5CADC300E6A0F6 /* libxml2.tbd */,
-				286C3B3F92C08175775BC351 /* libPods-iPassword.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5DE6374ED02EF6000F06E758 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5C8EF8C4F7D32A73AD4B1834 /* Pods-iPassword.debug.xcconfig */,
-				4BC02493F3FAAC508DBC4AE7 /* Pods-iPassword.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		76804D871DE1AB8600D72453 /* RSA */ = {
-			isa = PBXGroup;
-			children = (
-				76804D881DE1AB8600D72453 /* GzipUtility.h */,
-				76804D891DE1AB8600D72453 /* GzipUtility.m */,
-				76804D8C1DE1AB8600D72453 /* RSA.h */,
-				76804D8D1DE1AB8600D72453 /* RSA.m */,
-				76804D8E1DE1AB8600D72453 /* Security */,
-			);
-			path = RSA;
-			sourceTree = "<group>";
-		};
-		76804D8E1DE1AB8600D72453 /* Security */ = {
-			isa = PBXGroup;
-			children = (
-				76804D8F1DE1AB8600D72453 /* NSString+Hash.h */,
-				76804D901DE1AB8600D72453 /* NSString+Hash.m */,
-			);
-			path = Security;
-			sourceTree = "<group>";
-		};
-		B4C8A7FA1C5CA5B80057EA62 = {
-			isa = PBXGroup;
-			children = (
-				B4C8A8051C5CA5B80057EA62 /* iPassword */,
-				B4C8A8041C5CA5B80057EA62 /* Products */,
-				5DE6374ED02EF6000F06E758 /* Pods */,
-				5A71F390C71914784D0FA74A /* Frameworks */,
+				76138E8520E8788C0006A086 /* iPassword */,
+				76138EA320E87D170006A086 /* Frameworks */,
+				76138E8420E8788C0006A086 /* Products */,
+				920B206C33B54CCA70D445E9 /* Pods */,
+				A05ED4AAE9B37B2E2CD5402F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		B4C8A8041C5CA5B80057EA62 /* Products */ = {
+		76138E8420E8788C0006A086 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B4C8A8031C5CA5B80057EA62 /* iPassword.app */,
+				76138E8320E8788C0006A086 /* iPassword.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B4C8A8051C5CA5B80057EA62 /* iPassword */ = {
+		76138E8520E8788C0006A086 /* iPassword */ = {
 			isa = PBXGroup;
 			children = (
-				B4E070F71C5CA86800E6A0F6 /* Icons */,
-				B4E070F81C5CAC8E00E6A0F6 /* Framework */,
-				B4E070F61C5CA85000E6A0F6 /* Classes */,
-				B4E070E81C5CA84300E6A0F6 /* Main */,
-				B4C8A8121C5CA5B80057EA62 /* Assets.xcassets */,
-				B4C8A8061C5CA5B80057EA62 /* Supporting Files */,
+				76138E8620E8788C0006A086 /* AppDelegate.swift */,
+				76138E9820E87AF60006A086 /* Classes */,
+				76138E8D20E8788D0006A086 /* Assets.xcassets */,
+				76138E8F20E8788D0006A086 /* LaunchScreen.storyboard */,
+				76138E9220E8788D0006A086 /* Info.plist */,
+				76138EA920E87D400006A086 /* iPassword-Bridging-Header.h */,
 			);
 			path = iPassword;
 			sourceTree = "<group>";
 		};
-		B4C8A8061C5CA5B80057EA62 /* Supporting Files */ = {
+		76138E9820E87AF60006A086 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B4C8A8071C5CA5B80057EA62 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B4E070E81C5CA84300E6A0F6 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				B4E070E91C5CA84300E6A0F6 /* AppDelegate.h */,
-				B4E070EA1C5CA84300E6A0F6 /* AppDelegate.m */,
-				B4E070EB1C5CA84300E6A0F6 /* LaunchScreen.storyboard */,
-				B4E070ED1C5CA84300E6A0F6 /* Info.plist */,
-				B4E070EE1C5CA84300E6A0F6 /* main.m */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		B4E070F61C5CA85000E6A0F6 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B4E0710A1C5DD8EA00E6A0F6 /* Mine */,
-				B4E0710D1C5DD8EA00E6A0F6 /* Setting */,
-				B4E071061C5DD2C100E6A0F6 /* Account */,
-				B4E071031C5DAF8400E6A0F6 /* PADUIKitMacros.h */,
-				B4E071231C5E2DD500E6A0F6 /* PADBaseViewController.h */,
-				B4E071241C5E2DD500E6A0F6 /* PADBaseViewController.m */,
+				76138E9B20E87B3F0006A086 /* MainViewController.swift */,
+				76138E9A20E87B3F0006A086 /* Base */,
+				76138E9920E87B3F0006A086 /* Setting */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		B4E070F71C5CA86800E6A0F6 /* Icons */ = {
+		76138E9920E87B3F0006A086 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				76804D801DE1852D00D72453 /* icon_add.jpg */,
-				B4E071131C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png */,
-				B4E071141C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png */,
-				B4E071151C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png */,
-				B4E071161C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png */,
-				B4E0711E1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png */,
-			);
-			path = Icons;
-			sourceTree = "<group>";
-		};
-		B4E070F81C5CAC8E00E6A0F6 /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
-		B4E071061C5DD2C100E6A0F6 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				B4E071071C5DD2C100E6A0F6 /* PADAccountView.h */,
-				B4E071081C5DD2C100E6A0F6 /* PADAccountView.m */,
-				B4E0711B1C5DDC0F00E6A0F6 /* PADUser.h */,
-				B4E0711C1C5DDC0F00E6A0F6 /* PADUser.m */,
-				B4E071201C5E27DD00E6A0F6 /* PADLoginViewController.h */,
-				B4E071211C5E27DD00E6A0F6 /* PADLoginViewController.m */,
-				B4E071261C5E2F7000E6A0F6 /* PADLoginView.h */,
-				B4E071271C5E2F7000E6A0F6 /* PADLoginView.m */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
-		B4E0710A1C5DD8EA00E6A0F6 /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				76804D961DE1ABF500D72453 /* NSData+AES.h */,
-				76804D971DE1ABF500D72453 /* NSData+AES.m */,
-				76804D851DE1AB8600D72453 /* NSData+Base64.h */,
-				76804D861DE1AB8600D72453 /* NSData+Base64.m */,
-				76804D871DE1AB8600D72453 /* RSA */,
-				B4E0710B1C5DD8EA00E6A0F6 /* PADMineViewController.h */,
-				B4E0710C1C5DD8EA00E6A0F6 /* PADMineViewController.m */,
-				76804D7D1DE17B1F00D72453 /* PADPassword.h */,
-				76804D7E1DE17B1F00D72453 /* PADPassword.m */,
-				76804D821DE18A6C00D72453 /* PADEditPasswordViewController.h */,
-				76804D831DE18A6C00D72453 /* PADEditPasswordViewController.m */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		B4E0710D1C5DD8EA00E6A0F6 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				B4E071101C5DD92200E6A0F6 /* PADSettingViewController.h */,
-				B4E071111C5DD92200E6A0F6 /* PADSettingViewController.m */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		76138E9A20E87B3F0006A086 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				76138E9D20E87BA80006A086 /* YKNavigationViewController.swift */,
+				76138E9F20E87BBF0006A086 /* YKBaseViewController.swift */,
+				76138EA120E87BDB0006A086 /* YKBaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		76138EA320E87D170006A086 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76138EB320E87E370006A086 /* MobileCoreServices.framework */,
+				76138EB120E87E2C0006A086 /* libz.tbd */,
+				76138EAF20E87E040006A086 /* Security.framework */,
+				76138EAD20E87DFA0006A086 /* libstdc++.tbd */,
+				76138EA420E87D170006A086 /* iPassSecure.h */,
+				76138EA520E87D170006A086 /* libiPassSecure.a */,
+				76138EA620E87D170006A086 /* pub_key */,
+			);
+			name = Frameworks;
+			path = iPassword/Frameworks;
+			sourceTree = "<group>";
+		};
+		920B206C33B54CCA70D445E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E01544F1226995D380ADF276 /* Pods-iPassword.debug.xcconfig */,
+				C2AC88992134EF70FE0FE8E2 /* Pods-iPassword.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A05ED4AAE9B37B2E2CD5402F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C9278C8E2FE4341D2C7887C /* Pods_iPassword.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B4C8A8021C5CA5B80057EA62 /* iPassword */ = {
+		76138E8220E8788C0006A086 /* iPassword */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4C8A81A1C5CA5B80057EA62 /* Build configuration list for PBXNativeTarget "iPassword" */;
+			buildConfigurationList = 76138E9520E8788D0006A086 /* Build configuration list for PBXNativeTarget "iPassword" */;
 			buildPhases = (
-				82F72B96CFA1730AA195F1B6 /* Check Pods Manifest.lock */,
-				B4C8A7FF1C5CA5B80057EA62 /* Sources */,
-				B4C8A8001C5CA5B80057EA62 /* Frameworks */,
-				B4C8A8011C5CA5B80057EA62 /* Resources */,
-				4E9796C0FB41F726388BB12E /* Copy Pods Resources */,
+				A764494C7609CA339F0A6798 /* [CP] Check Pods Manifest.lock */,
+				76138E7F20E8788C0006A086 /* Sources */,
+				76138E8020E8788C0006A086 /* Frameworks */,
+				76138E8120E8788C0006A086 /* Resources */,
+				2E6A923485B0B17C13BB356C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,126 +173,123 @@
 			);
 			name = iPassword;
 			productName = iPassword;
-			productReference = B4C8A8031C5CA5B80057EA62 /* iPassword.app */;
+			productReference = 76138E8320E8788C0006A086 /* iPassword.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B4C8A7FB1C5CA5B80057EA62 /* Project object */ = {
+		76138E7B20E8788C0006A086 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = kdtm;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = SDJG;
 				TargetAttributes = {
-					B4C8A8021C5CA5B80057EA62 = {
-						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 7Q62N6S7X8;
-						ProvisioningStyle = Automatic;
+					76138E8220E8788C0006A086 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
-			buildConfigurationList = B4C8A7FE1C5CA5B80057EA62 /* Build configuration list for PBXProject "iPassword" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 76138E7E20E8788C0006A086 /* Build configuration list for PBXProject "iPassword" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = B4C8A7FA1C5CA5B80057EA62;
-			productRefGroup = B4C8A8041C5CA5B80057EA62 /* Products */;
+			mainGroup = 76138E7A20E8788C0006A086;
+			productRefGroup = 76138E8420E8788C0006A086 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4C8A8021C5CA5B80057EA62 /* iPassword */,
+				76138E8220E8788C0006A086 /* iPassword */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B4C8A8011C5CA5B80057EA62 /* Resources */ = {
+		76138E8120E8788C0006A086 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76804D811DE1852D00D72453 /* icon_add.jpg in Resources */,
-				B4C8A8131C5CA5B80057EA62 /* Assets.xcassets in Resources */,
-				B4E070F21C5CA84300E6A0F6 /* LaunchScreen.storyboard in Resources */,
-				B4E071191C5DDAE400E6A0F6 /* icon_tabbar_misc_selected@2x.png in Resources */,
-				B4E071171C5DDAE400E6A0F6 /* icon_tabbar_mine_selected@2x.png in Resources */,
-				B4E070F31C5CA84300E6A0F6 /* Info.plist in Resources */,
-				B4E0711F1C5DE02400E6A0F6 /* icon_mine_default_portrait@2x.png in Resources */,
-				B4E0711A1C5DDAE400E6A0F6 /* icon_tabbar_misc@2x.png in Resources */,
-				B4E071181C5DDAE400E6A0F6 /* icon_tabbar_mine@2x.png in Resources */,
+				76138EA820E87D170006A086 /* pub_key in Resources */,
+				76138E9120E8788D0006A086 /* LaunchScreen.storyboard in Resources */,
+				76138E8E20E8788D0006A086 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E9796C0FB41F726388BB12E /* Copy Pods Resources */ = {
+		2E6A923485B0B17C13BB356C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iPassword/Pods-iPassword-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPassword/Pods-iPassword-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPassword/Pods-iPassword-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		82F72B96CFA1730AA195F1B6 /* Check Pods Manifest.lock */ = {
+		A764494C7609CA339F0A6798 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPassword-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B4C8A7FF1C5CA5B80057EA62 /* Sources */ = {
+		76138E7F20E8788C0006A086 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76804D7F1DE17B1F00D72453 /* PADPassword.m in Sources */,
-				76804D951DE1AB8600D72453 /* NSString+Hash.m in Sources */,
-				B4E071091C5DD2C100E6A0F6 /* PADAccountView.m in Sources */,
-				B4E071251C5E2DD500E6A0F6 /* PADBaseViewController.m in Sources */,
-				B4E070F11C5CA84300E6A0F6 /* AppDelegate.m in Sources */,
-				76804D841DE18A6C00D72453 /* PADEditPasswordViewController.m in Sources */,
-				76804D981DE1ABF500D72453 /* NSData+AES.m in Sources */,
-				76804D941DE1AB8600D72453 /* RSA.m in Sources */,
-				76804D911DE1AB8600D72453 /* NSData+Base64.m in Sources */,
-				B4E071121C5DD92200E6A0F6 /* PADSettingViewController.m in Sources */,
-				B4E071221C5E27DD00E6A0F6 /* PADLoginViewController.m in Sources */,
-				B4E070F41C5CA84300E6A0F6 /* main.m in Sources */,
-				B4E0711D1C5DDC0F00E6A0F6 /* PADUser.m in Sources */,
-				76804D921DE1AB8600D72453 /* GzipUtility.m in Sources */,
-				B4E071281C5E2F7000E6A0F6 /* PADLoginView.m in Sources */,
-				B4E0710F1C5DD8EA00E6A0F6 /* PADMineViewController.m in Sources */,
+				76138E8720E8788C0006A086 /* AppDelegate.swift in Sources */,
+				76138E9C20E87B3F0006A086 /* MainViewController.swift in Sources */,
+				76138E9E20E87BA80006A086 /* YKNavigationViewController.swift in Sources */,
+				76138EA020E87BBF0006A086 /* YKBaseViewController.swift in Sources */,
+				76138EA220E87BDB0006A086 /* YKBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B4E070EB1C5CA84300E6A0F6 /* LaunchScreen.storyboard */ = {
+		76138E8F20E8788D0006A086 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B4E070EC1C5CA84300E6A0F6 /* Base */,
+				76138E9020E8788D0006A086 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -430,29 +297,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B4C8A8181C5CA5B80057EA62 /* Debug */ = {
+		76138E9320E8788D0006A086 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -466,36 +348,53 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		B4C8A8191C5CA5B80057EA62 /* Release */ = {
+		76138E9420E8788D0006A086 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -503,86 +402,118 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B4C8A81B1C5CA5B80057EA62 /* Debug */ = {
+		76138E9620E8788D0006A086 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C8EF8C4F7D32A73AD4B1834 /* Pods-iPassword.debug.xcconfig */;
+			baseConfigurationReference = E01544F1226995D380ADF276 /* Pods-iPassword.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7Q62N6S7X8;
-				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VMTN98C772;
+				INFOPLIST_FILE = iPassword/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/iPassword/Framework",
+					"@executable_path/Frameworks",
 				);
-				INFOPLIST_FILE = iPassword/Main/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)/iPassword/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloud.kdtm.iPassword;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SnapKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyuanke.iPassword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iPassword/iPassword-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B4C8A81C1C5CA5B80057EA62 /* Release */ = {
+		76138E9720E8788D0006A086 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BC02493F3FAAC508DBC4AE7 /* Pods-iPassword.release.xcconfig */;
+			baseConfigurationReference = C2AC88992134EF70FE0FE8E2 /* Pods-iPassword.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7Q62N6S7X8;
-				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VMTN98C772;
+				INFOPLIST_FILE = iPassword/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/iPassword/Framework",
+					"@executable_path/Frameworks",
 				);
-				INFOPLIST_FILE = iPassword/Main/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)/iPassword/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloud.kdtm.iPassword;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SnapKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyuanke.iPassword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iPassword/iPassword-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B4C8A7FE1C5CA5B80057EA62 /* Build configuration list for PBXProject "iPassword" */ = {
+		76138E7E20E8788C0006A086 /* Build configuration list for PBXProject "iPassword" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4C8A8181C5CA5B80057EA62 /* Debug */,
-				B4C8A8191C5CA5B80057EA62 /* Release */,
+				76138E9320E8788D0006A086 /* Debug */,
+				76138E9420E8788D0006A086 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4C8A81A1C5CA5B80057EA62 /* Build configuration list for PBXNativeTarget "iPassword" */ = {
+		76138E9520E8788D0006A086 /* Build configuration list for PBXNativeTarget "iPassword" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4C8A81B1C5CA5B80057EA62 /* Debug */,
-				B4C8A81C1C5CA5B80057EA62 /* Release */,
+				76138E9620E8788D0006A086 /* Debug */,
+				76138E9720E8788D0006A086 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B4C8A7FB1C5CA5B80057EA62 /* Project object */;
+	rootObject = 76138E7B20E8788C0006A086 /* Project object */;
 }
