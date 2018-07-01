@@ -48,8 +48,8 @@ extension AppDelegate {
     func showMainVC()
     {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let nav = YKNavigationViewController(rootViewController: MainViewController())
-        window?.rootViewController = nav
+//        let nav = YKNavigationViewController(rootViewController: MainViewController())
+        window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
     }
 }

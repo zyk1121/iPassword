@@ -22,6 +22,24 @@
 		76138EB420E87E370006A086 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EB320E87E370006A086 /* MobileCoreServices.framework */; };
 		76138EB720E8C3100006A086 /* YKCommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EB620E8C3100006A086 /* YKCommonDefine.swift */; };
 		76138EB920E8C3A00006A086 /* YKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EB820E8C3A00006A086 /* YKExtension.swift */; };
+		76138EBC20E8CFD30006A086 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 76138EBB20E8CFD30006A086 /* MainVCSettings.json */; };
+		76138ECC20E8D0700006A086 /* tabbar_discover_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EBF20E8D06F0006A086 /* tabbar_discover_highlighted@3x.png */; };
+		76138ECD20E8D0700006A086 /* tabbar_home_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC020E8D06F0006A086 /* tabbar_home_highlighted@3x.png */; };
+		76138ECE20E8D0700006A086 /* tabbar_compose_button_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC120E8D06F0006A086 /* tabbar_compose_button_highlighted@3x.png */; };
+		76138ECF20E8D0700006A086 /* tabbar_profile_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC220E8D06F0006A086 /* tabbar_profile_highlighted@3x.png */; };
+		76138ED020E8D0700006A086 /* tabbar_compose_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC320E8D06F0006A086 /* tabbar_compose_button@3x.png */; };
+		76138ED120E8D0700006A086 /* tabbar_profile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC420E8D06F0006A086 /* tabbar_profile@3x.png */; };
+		76138ED220E8D0700006A086 /* tabbar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC520E8D06F0006A086 /* tabbar_background@2x.png */; };
+		76138ED320E8D0700006A086 /* tabbar_compose_icon_add_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC620E8D06F0006A086 /* tabbar_compose_icon_add_highlighted@3x.png */; };
+		76138ED420E8D0700006A086 /* tabbar_compose_icon_add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC720E8D06F0006A086 /* tabbar_compose_icon_add@3x.png */; };
+		76138ED520E8D0700006A086 /* tabbar_home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC820E8D06F0006A086 /* tabbar_home@3x.png */; };
+		76138ED620E8D0700006A086 /* tabbar_message_center_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138EC920E8D06F0006A086 /* tabbar_message_center_highlighted@3x.png */; };
+		76138ED720E8D0700006A086 /* tabbar_message_center@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138ECA20E8D0700006A086 /* tabbar_message_center@3x.png */; };
+		76138ED820E8D0700006A086 /* tabbar_discover@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76138ECB20E8D0700006A086 /* tabbar_discover@3x.png */; };
+		76138EDA20E8D0F90006A086 /* YKMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138ED920E8D0F90006A086 /* YKMeViewController.swift */; };
+		76138EDF20E8D19D0006A086 /* YKHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EDE20E8D19D0006A086 /* YKHomeViewController.swift */; };
+		76138EE120E8D1B70006A086 /* YKPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EE020E8D1B70006A086 /* YKPhotoViewController.swift */; };
+		76138EE320E8D1CA0006A086 /* YKPoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EE220E8D1CA0006A086 /* YKPoemViewController.swift */; };
 		AEA3D46006EE7B6C08A7B5E1 /* Pods_iPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9278C8E2FE4341D2C7887C /* Pods_iPassword.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +64,24 @@
 		76138EB320E87E370006A086 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		76138EB620E8C3100006A086 /* YKCommonDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKCommonDefine.swift; sourceTree = "<group>"; };
 		76138EB820E8C3A00006A086 /* YKExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKExtension.swift; sourceTree = "<group>"; };
+		76138EBB20E8CFD30006A086 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		76138EBF20E8D06F0006A086 /* tabbar_discover_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover_highlighted@3x.png"; sourceTree = "<group>"; };
+		76138EC020E8D06F0006A086 /* tabbar_home_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_highlighted@3x.png"; sourceTree = "<group>"; };
+		76138EC120E8D06F0006A086 /* tabbar_compose_button_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_button_highlighted@3x.png"; sourceTree = "<group>"; };
+		76138EC220E8D06F0006A086 /* tabbar_profile_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile_highlighted@3x.png"; sourceTree = "<group>"; };
+		76138EC320E8D06F0006A086 /* tabbar_compose_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_button@3x.png"; sourceTree = "<group>"; };
+		76138EC420E8D06F0006A086 /* tabbar_profile@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_profile@3x.png"; sourceTree = "<group>"; };
+		76138EC520E8D06F0006A086 /* tabbar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_background@2x.png"; sourceTree = "<group>"; };
+		76138EC620E8D06F0006A086 /* tabbar_compose_icon_add_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_icon_add_highlighted@3x.png"; sourceTree = "<group>"; };
+		76138EC720E8D06F0006A086 /* tabbar_compose_icon_add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_compose_icon_add@3x.png"; sourceTree = "<group>"; };
+		76138EC820E8D06F0006A086 /* tabbar_home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home@3x.png"; sourceTree = "<group>"; };
+		76138EC920E8D06F0006A086 /* tabbar_message_center_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_message_center_highlighted@3x.png"; sourceTree = "<group>"; };
+		76138ECA20E8D0700006A086 /* tabbar_message_center@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_message_center@3x.png"; sourceTree = "<group>"; };
+		76138ECB20E8D0700006A086 /* tabbar_discover@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover@3x.png"; sourceTree = "<group>"; };
+		76138ED920E8D0F90006A086 /* YKMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMeViewController.swift; sourceTree = "<group>"; };
+		76138EDE20E8D19D0006A086 /* YKHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKHomeViewController.swift; sourceTree = "<group>"; };
+		76138EE020E8D1B70006A086 /* YKPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPhotoViewController.swift; sourceTree = "<group>"; };
+		76138EE220E8D1CA0006A086 /* YKPoemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPoemViewController.swift; sourceTree = "<group>"; };
 		C2AC88992134EF70FE0FE8E2 /* Pods-iPassword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.release.xcconfig"; sourceTree = "<group>"; };
 		E01544F1226995D380ADF276 /* Pods-iPassword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				76138E8620E8788C0006A086 /* AppDelegate.swift */,
+				76138EBA20E8CFC40006A086 /* Resources */,
 				76138E9820E87AF60006A086 /* Classes */,
 				76138E8D20E8788D0006A086 /* Assets.xcassets */,
 				76138E8F20E8788D0006A086 /* LaunchScreen.storyboard */,
@@ -103,6 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				76138E9B20E87B3F0006A086 /* MainViewController.swift */,
+				76138EDD20E8D18D0006A086 /* Home */,
+				76138EDC20E8D18D0006A086 /* Photo */,
+				76138EDB20E8D18C0006A086 /* Poem */,
 				76138E9A20E87B3F0006A086 /* Base */,
 				76138E9920E87B3F0006A086 /* Setting */,
 			);
@@ -112,6 +152,7 @@
 		76138E9920E87B3F0006A086 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				76138ED920E8D0F90006A086 /* YKMeViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -141,6 +182,67 @@
 			);
 			name = Frameworks;
 			path = iPassword/Frameworks;
+			sourceTree = "<group>";
+		};
+		76138EBA20E8CFC40006A086 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76138EBD20E8CFF90006A086 /* icons */,
+				76138EBB20E8CFD30006A086 /* MainVCSettings.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		76138EBD20E8CFF90006A086 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				76138EBE20E8D0090006A086 /* tabbar */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		76138EBE20E8D0090006A086 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				76138EC520E8D06F0006A086 /* tabbar_background@2x.png */,
+				76138EC120E8D06F0006A086 /* tabbar_compose_button_highlighted@3x.png */,
+				76138EC320E8D06F0006A086 /* tabbar_compose_button@3x.png */,
+				76138EC620E8D06F0006A086 /* tabbar_compose_icon_add_highlighted@3x.png */,
+				76138EC720E8D06F0006A086 /* tabbar_compose_icon_add@3x.png */,
+				76138EBF20E8D06F0006A086 /* tabbar_discover_highlighted@3x.png */,
+				76138ECB20E8D0700006A086 /* tabbar_discover@3x.png */,
+				76138EC020E8D06F0006A086 /* tabbar_home_highlighted@3x.png */,
+				76138EC820E8D06F0006A086 /* tabbar_home@3x.png */,
+				76138EC920E8D06F0006A086 /* tabbar_message_center_highlighted@3x.png */,
+				76138ECA20E8D0700006A086 /* tabbar_message_center@3x.png */,
+				76138EC220E8D06F0006A086 /* tabbar_profile_highlighted@3x.png */,
+				76138EC420E8D06F0006A086 /* tabbar_profile@3x.png */,
+			);
+			path = tabbar;
+			sourceTree = "<group>";
+		};
+		76138EDB20E8D18C0006A086 /* Poem */ = {
+			isa = PBXGroup;
+			children = (
+				76138EE220E8D1CA0006A086 /* YKPoemViewController.swift */,
+			);
+			path = Poem;
+			sourceTree = "<group>";
+		};
+		76138EDC20E8D18D0006A086 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				76138EE020E8D1B70006A086 /* YKPhotoViewController.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		76138EDD20E8D18D0006A086 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				76138EDE20E8D19D0006A086 /* YKHomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		920B206C33B54CCA70D445E9 /* Pods */ = {
@@ -222,8 +324,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76138ECD20E8D0700006A086 /* tabbar_home_highlighted@3x.png in Resources */,
+				76138ED620E8D0700006A086 /* tabbar_message_center_highlighted@3x.png in Resources */,
+				76138ED220E8D0700006A086 /* tabbar_background@2x.png in Resources */,
+				76138ECF20E8D0700006A086 /* tabbar_profile_highlighted@3x.png in Resources */,
 				76138EA820E87D170006A086 /* pub_key in Resources */,
+				76138ED020E8D0700006A086 /* tabbar_compose_button@3x.png in Resources */,
+				76138ED320E8D0700006A086 /* tabbar_compose_icon_add_highlighted@3x.png in Resources */,
+				76138ED820E8D0700006A086 /* tabbar_discover@3x.png in Resources */,
 				76138E9120E8788D0006A086 /* LaunchScreen.storyboard in Resources */,
+				76138ECC20E8D0700006A086 /* tabbar_discover_highlighted@3x.png in Resources */,
+				76138ECE20E8D0700006A086 /* tabbar_compose_button_highlighted@3x.png in Resources */,
+				76138ED720E8D0700006A086 /* tabbar_message_center@3x.png in Resources */,
+				76138ED120E8D0700006A086 /* tabbar_profile@3x.png in Resources */,
+				76138ED520E8D0700006A086 /* tabbar_home@3x.png in Resources */,
+				76138EBC20E8CFD30006A086 /* MainVCSettings.json in Resources */,
+				76138ED420E8D0700006A086 /* tabbar_compose_icon_add@3x.png in Resources */,
 				76138E8E20E8788D0006A086 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,13 +412,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76138EDA20E8D0F90006A086 /* YKMeViewController.swift in Sources */,
 				76138E8720E8788C0006A086 /* AppDelegate.swift in Sources */,
 				76138EB920E8C3A00006A086 /* YKExtension.swift in Sources */,
 				76138EB720E8C3100006A086 /* YKCommonDefine.swift in Sources */,
 				76138E9C20E87B3F0006A086 /* MainViewController.swift in Sources */,
 				76138E9E20E87BA80006A086 /* YKNavigationViewController.swift in Sources */,
 				76138EA020E87BBF0006A086 /* YKBaseViewController.swift in Sources */,
+				76138EDF20E8D19D0006A086 /* YKHomeViewController.swift in Sources */,
 				76138EA220E87BDB0006A086 /* YKBaseView.swift in Sources */,
+				76138EE120E8D1B70006A086 /* YKPhotoViewController.swift in Sources */,
+				76138EE320E8D1CA0006A086 /* YKPoemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

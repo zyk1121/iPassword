@@ -42,6 +42,12 @@ class YKBaseViewController: UIViewController {
         self.navigationItem.leftBarButtonItem?.tintColor = color
     }
     
+    // 隐藏导航栏返回按钮
+    func hideNavLeftButton()
+    {
+        self.navigationItem.leftBarButtonItem = nil
+    }
+    
     // 设置标题
     func setTitle(title:String) {
         self.navigationItem.title = title

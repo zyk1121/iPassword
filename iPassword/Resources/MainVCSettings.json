@@ -1,0 +1,22 @@
+ [
+  {
+  "vcName": "YKHomeViewController",
+  "title": "首页",
+  "imageName": "tabbar_home"
+  },
+  {
+  "vcName": "YKPhotoViewController",
+  "title": "相机",
+  "imageName": "tabbar_message_center"
+  },
+  {
+  "vcName": "YKPoemViewController",
+  "title": "诗词",
+  "imageName": "tabbar_discover"
+  },
+  {
+  "vcName": "YKMeViewController",
+  "title": "我",
+  "imageName": "tabbar_profile"
+  }
+  ]

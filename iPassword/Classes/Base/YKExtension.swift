@@ -23,7 +23,6 @@ extension UIColor {
         
     }
     
-    
     public final class func extColorWithHex(_ hex : String, alpha:CGFloat) -> UIColor{
         var hexColor = hex
         
