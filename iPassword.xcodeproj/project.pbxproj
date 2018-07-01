@@ -20,6 +20,8 @@
 		76138EB020E87E050006A086 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EAF20E87E040006A086 /* Security.framework */; };
 		76138EB220E87E2D0006A086 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EB120E87E2C0006A086 /* libz.tbd */; };
 		76138EB420E87E370006A086 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EB320E87E370006A086 /* MobileCoreServices.framework */; };
+		76138EB720E8C3100006A086 /* YKCommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EB620E8C3100006A086 /* YKCommonDefine.swift */; };
+		76138EB920E8C3A00006A086 /* YKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EB820E8C3A00006A086 /* YKExtension.swift */; };
 		AEA3D46006EE7B6C08A7B5E1 /* Pods_iPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9278C8E2FE4341D2C7887C /* Pods_iPassword.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		76138EAF20E87E040006A086 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		76138EB120E87E2C0006A086 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		76138EB320E87E370006A086 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		76138EB620E8C3100006A086 /* YKCommonDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKCommonDefine.swift; sourceTree = "<group>"; };
+		76138EB820E8C3A00006A086 /* YKExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKExtension.swift; sourceTree = "<group>"; };
 		C2AC88992134EF70FE0FE8E2 /* Pods-iPassword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.release.xcconfig"; sourceTree = "<group>"; };
 		E01544F1226995D380ADF276 /* Pods-iPassword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +122,8 @@
 				76138E9D20E87BA80006A086 /* YKNavigationViewController.swift */,
 				76138E9F20E87BBF0006A086 /* YKBaseViewController.swift */,
 				76138EA120E87BDB0006A086 /* YKBaseView.swift */,
+				76138EB620E8C3100006A086 /* YKCommonDefine.swift */,
+				76138EB820E8C3A00006A086 /* YKExtension.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -166,6 +172,7 @@
 				76138E8020E8788C0006A086 /* Frameworks */,
 				76138E8120E8788C0006A086 /* Resources */,
 				2E6A923485B0B17C13BB356C /* [CP] Embed Pods Frameworks */,
+				76138EB520E8A8660006A086 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +257,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPassword/Pods-iPassword-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		76138EB520E8A8660006A086 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "versionNumber=$(/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nsed -i bak -e \"/userLabel=\\\"AppVersion\\\"/s/text=\\\"[^\\\"]*\\\"/text=\\\"v$versionNumber\\\"/\" $PROJECT_DIR/iPassword/Base.lproj/LaunchScreen.storyboard";
+			showEnvVarsInLog = 0;
+		};
 		A764494C7609CA339F0A6798 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				76138E8720E8788C0006A086 /* AppDelegate.swift in Sources */,
+				76138EB920E8C3A00006A086 /* YKExtension.swift in Sources */,
+				76138EB720E8C3100006A086 /* YKCommonDefine.swift in Sources */,
 				76138E9C20E87B3F0006A086 /* MainViewController.swift in Sources */,
 				76138E9E20E87BA80006A086 /* YKNavigationViewController.swift in Sources */,
 				76138EA020E87BBF0006A086 /* YKBaseViewController.swift in Sources */,
