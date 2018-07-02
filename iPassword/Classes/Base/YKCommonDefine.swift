@@ -34,5 +34,7 @@ public let YK_KEY_WINDOW = UIApplication.shared.delegate?.window ?? UIApplicatio
 
 // 导航栏返回按钮的颜色
 public let YKNaviBackArrowColor = UIColor.extColorWithHex("323232", alpha: 1.0)
-// App主色:orange
+// App Tab 主色:orange
 public let YKMainColor = UIColor.orange
+// App 默认其他主色:蓝色
+public let YKMainIconColor = UIColor.extRGBA(red: 87.0, green: 153, blue: 231, alpha: 1.0)

@@ -1,7 +1,7 @@
  [
   {
   "vcName": "YKHomeViewController",
-  "title": "首页",
+  "title": "密保",
   "imageName": "tabbar_home"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
   "vcName": "YKMeViewController",
-  "title": "我",
+  "title": "设置",
   "imageName": "tabbar_profile"
   }
   ]

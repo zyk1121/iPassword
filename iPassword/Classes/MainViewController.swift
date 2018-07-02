@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 主VC入口
 class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
@@ -15,7 +16,7 @@ class MainViewController: UITabBarController {
         // App主色调
         tabBar.tintColor = YKMainColor
         
-        
+        /*
         iPassSecure.shared().setupLoginPass("123456")
         if (iPassSecure.shared().checkPassword("123456")) {
             print("成功")
@@ -23,37 +24,10 @@ class MainViewController: UITabBarController {
             print("失败")
         }
         self.navigationItem.title = "iPass"
-        
-        let imv = UIImageView(image: UIImage(named: "naviBack"))
-        imv.frame = CGRect(x: 0, y: 100, width: 100, height: 100)
-//        self.view.addSubview(imv)
-//        self.navigationItem.leftBarButtonItem = nil
-//        self.hideNavLeftButton()
+         */
+ 
         self.navigationController?.navigationBar.isHidden = true
-        
-//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.red
         addViewControllers()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-        let vc = YKBaseViewController()
-//        vc.setLeftBarColor(color: UIColor.red)
-        self.navigationController?.pushViewController(vc, animated: true)
-        
-        
-//        let vc = YKBaseViewController()
-//        vc.setLeftBarColor(color: UIColor.red)
-//        self.navigationController?.pushViewController(vc, animated: true)
-        /*
-        let vc  = YKBaseViewController()
-        vc.setCloseBackButton()
-        let nav = YKNavigationViewController(rootViewController: vc)
-        self.present(nav, animated: true) {
-        }
- */
-        
     }
     
     private func addViewControllers()
@@ -67,10 +41,10 @@ class MainViewController: UITabBarController {
                     addChildViewController(dict["vcName"]!, titleName: dict["title"]!, imageName: dict["imageName"]!)
                 }
             } catch {
-                addChildViewController("YKHomeViewController",titleName: "首页",imageName: "tabbar_home")
-                addChildViewController("YKPhotoViewController",titleName: "消息",imageName: "tabbar_message_center")
-                addChildViewController("YKPoemViewController",titleName: "发现",imageName: "tabbar_discover")
-                addChildViewController("YKMeViewController",titleName: "我",imageName: "tabbar_profile")
+                addChildViewController("YKHomeViewController",titleName: "密保",imageName: "tabbar_home")
+                addChildViewController("YKPhotoViewController",titleName: "相机",imageName: "tabbar_message_center")
+                addChildViewController("YKPoemViewController",titleName: "诗词",imageName: "tabbar_discover")
+                addChildViewController("YKMeViewController",titleName: "设置",imageName: "tabbar_profile")
             }
         }
     }
@@ -90,5 +64,15 @@ class MainViewController: UITabBarController {
         
         addChildViewController(navVC)
     }
+    
+    /*
+     let vc = YKBaseViewController()
+     vc.setLeftBarColor(color: UIColor.red)
+     self.navigationController?.pushViewController(vc, animated: true)
+     let vc  = YKBaseViewController()
+     vc.setCloseBackButton()
+     let nav = YKNavigationViewController(rootViewController: vc)
+     self.present(nav, animated: true) {
+     }*/
 }
 

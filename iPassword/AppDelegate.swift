@@ -51,5 +51,12 @@ extension AppDelegate {
 //        let nav = YKNavigationViewController(rootViewController: MainViewController())
         window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
+        
+        checkPassword()
+    }
+    
+    func checkPassword()
+    {
+        YKPasswordSettingView.showPasswordSettingViewWith(type: .change_step_one)
     }
 }
