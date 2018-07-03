@@ -40,6 +40,8 @@
 		76138EDF20E8D19D0006A086 /* YKHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EDE20E8D19D0006A086 /* YKHomeViewController.swift */; };
 		76138EE120E8D1B70006A086 /* YKPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EE020E8D1B70006A086 /* YKPhotoViewController.swift */; };
 		76138EE320E8D1CA0006A086 /* YKPoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76138EE220E8D1CA0006A086 /* YKPoemViewController.swift */; };
+		76138EE520E922750006A086 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76138EE420E922750006A086 /* LocalAuthentication.framework */; };
+		76EF58A320EA7125001E5E43 /* YKPasswordSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF58A220EA7125001E5E43 /* YKPasswordSettingView.swift */; };
 		AEA3D46006EE7B6C08A7B5E1 /* Pods_iPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9278C8E2FE4341D2C7887C /* Pods_iPassword.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,9 @@
 		76138EDE20E8D19D0006A086 /* YKHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKHomeViewController.swift; sourceTree = "<group>"; };
 		76138EE020E8D1B70006A086 /* YKPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPhotoViewController.swift; sourceTree = "<group>"; };
 		76138EE220E8D1CA0006A086 /* YKPoemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPoemViewController.swift; sourceTree = "<group>"; };
+		76138EE420E922750006A086 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		76138EE620E9229D0006A086 /* iPassword.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iPassword.entitlements; sourceTree = "<group>"; };
+		76EF58A220EA7125001E5E43 /* YKPasswordSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPasswordSettingView.swift; sourceTree = "<group>"; };
 		C2AC88992134EF70FE0FE8E2 /* Pods-iPassword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.release.xcconfig"; sourceTree = "<group>"; };
 		E01544F1226995D380ADF276 /* Pods-iPassword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76138EE520E922750006A086 /* LocalAuthentication.framework in Frameworks */,
 				76138EB420E87E370006A086 /* MobileCoreServices.framework in Frameworks */,
 				76138EB220E87E2D0006A086 /* libz.tbd in Frameworks */,
 				76138EB020E87E050006A086 /* Security.framework in Frameworks */,
@@ -125,6 +131,7 @@
 		76138E8520E8788C0006A086 /* iPassword */ = {
 			isa = PBXGroup;
 			children = (
+				76138EE620E9229D0006A086 /* iPassword.entitlements */,
 				76138E8620E8788C0006A086 /* AppDelegate.swift */,
 				76138EBA20E8CFC40006A086 /* Resources */,
 				76138E9820E87AF60006A086 /* Classes */,
@@ -153,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				76138ED920E8D0F90006A086 /* YKMeViewController.swift */,
+				76EF58A220EA7125001E5E43 /* YKPasswordSettingView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 		76138EA320E87D170006A086 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76138EE420E922750006A086 /* LocalAuthentication.framework */,
 				76138EB320E87E370006A086 /* MobileCoreServices.framework */,
 				76138EB120E87E2C0006A086 /* libz.tbd */,
 				76138EAF20E87E040006A086 /* Security.framework */,
@@ -298,6 +307,11 @@
 					76138E8220E8788C0006A086 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -422,6 +436,7 @@
 				76138EDF20E8D19D0006A086 /* YKHomeViewController.swift in Sources */,
 				76138EA220E87BDB0006A086 /* YKBaseView.swift in Sources */,
 				76138EE120E8D1B70006A086 /* YKPhotoViewController.swift in Sources */,
+				76EF58A320EA7125001E5E43 /* YKPasswordSettingView.swift in Sources */,
 				76138EE320E8D1CA0006A086 /* YKPoemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

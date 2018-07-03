@@ -48,7 +48,6 @@ extension AppDelegate {
     func showMainVC()
     {
         window = UIWindow(frame: UIScreen.main.bounds)
-//        let nav = YKNavigationViewController(rootViewController: MainViewController())
         window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
         
@@ -57,6 +56,7 @@ extension AppDelegate {
     
     func checkPassword()
     {
+        // 第一次需要设置密码，之后需要验证密码或者指纹，人脸
         YKPasswordSettingView.showPasswordSettingViewWith(type: .change_step_one)
     }
 }
