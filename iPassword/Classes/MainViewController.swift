@@ -15,17 +15,7 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         // App主色调
         tabBar.tintColor = YKMainColor
-        
-        /*
-        iPassSecure.shared().setupLoginPass("123456")
-        if (iPassSecure.shared().checkPassword("123456")) {
-            print("成功")
-        } else {
-            print("失败")
-        }
-        self.navigationItem.title = "iPass"
-         */
- 
+    
         self.navigationController?.navigationBar.isHidden = true
         addViewControllers()
     }

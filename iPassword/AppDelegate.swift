@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    weak var mainVC:MainViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         showMainVC()
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        
+        YKPasswordSettingConfig.config.backgroundMode = true
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-       
+        YKPasswordSettingConfig.config.checkNeedVerify()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -45,7 +45,9 @@ extension AppDelegate {
     func showMainVC()
     {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MainViewController()
+        let vc = MainViewController()
+        window?.rootViewController = vc
+        mainVC = vc
         window?.makeKeyAndVisible()
         // 第一次设置密码
         checkPassword()

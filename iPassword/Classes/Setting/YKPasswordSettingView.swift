@@ -272,7 +272,7 @@ class YKPasswordSettingView: UIView {
                     DispatchQueue.main.async {
                         // 验证成功
                         self.tipsLabel.text = "欢迎进入~"
-                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
                             self.removeFromSuperview()
                         }
                     }
@@ -407,7 +407,7 @@ class YKPasswordSettingView: UIView {
 
 class YKPasswordSettingConfig {
     public static let config = YKPasswordSettingConfig()
-    
+    public var backgroundMode:Bool = true // 进入后台
     public var isBackground:Bool = false
     init() {
         
@@ -430,13 +430,19 @@ class YKPasswordSettingConfig {
     }
     
     func checkNeedVerify() {
-        if (!isShowingPasswordView()) {
+        var tabBarSelectIndex:Int = 0
+        if let appDel = UIApplication.shared.delegate as? AppDelegate,let mainVC = appDel.mainVC {
+            tabBarSelectIndex = mainVC.selectedIndex
+        }
+        
+        if (!isShowingPasswordView() && backgroundMode && tabBarSelectIndex == 0) {
             if (isTouchIDEnabled()) {
                 // 验证指纹
                 YKPasswordSettingView.showPasswordSettingViewWith(type: .touchid)
             } else {
                 YKPasswordSettingView.showPasswordSettingViewWith(type: .verify)
             }
+            backgroundMode = false
         }
     }
     func isTouchIDEnabled() -> Bool
