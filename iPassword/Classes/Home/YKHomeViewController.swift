@@ -17,6 +17,12 @@ class YKHomeViewController: YKBaseViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // 验证密码
+        YKPasswordSettingConfig.config.checkNeedVerify()
+    }
+    
     func checkTouchID()
     {
         //1.初始化TouchID句柄

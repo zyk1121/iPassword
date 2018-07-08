@@ -11,6 +11,7 @@ import SnapKit
 import SDWebImage
 import RxCocoa
 import RxSwift
+import LocalAuthentication
 
 // 密码视图类型
 enum YKPasswordSettingType:Int {
@@ -23,13 +24,15 @@ enum YKPasswordSettingType:Int {
 }
 
 // 全局的视图
-private var kYKSettingPassView:YKPasswordSettingView? = nil
+private weak var kYKSettingPassView:YKPasswordSettingView? = nil
 // YKMainIconColor
 // 密码设置页面
 class YKPasswordSettingView: UIView {
     
     var password:BehaviorRelay<String> = BehaviorRelay(value: "")
     let disposeBag:DisposeBag = DisposeBag()
+    var firstPassword:String = ""
+    var secondPassword:String = ""
     
     public let tipsLabel:UILabel = {
         let label = UILabel()
@@ -43,6 +46,13 @@ class YKPasswordSettingView: UIView {
     private var numButtons:[YKNumberKeyButton] = []
     private var numZeroBtn:YKNumberKeyButton = YKNumberKeyButton()
     private var cancelBtn:YKNumberKeyButton = YKNumberKeyButton()
+    
+    // 指纹图标
+    private var touchIcon:UIImageView = {
+        let imv = UIImageView()
+        imv.image = UIImage(named: "touchid")
+        return imv
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -118,6 +128,19 @@ class YKPasswordSettingView: UIView {
         cancelBtn.numLabel.text = "X"
         cancelBtn.clipsToBounds = true
         self.addSubview(cancelBtn)
+        
+        // touch
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(tapClick(ges:)))
+        singleTap.numberOfTapsRequired = 1
+        singleTap.numberOfTouchesRequired = 1
+        touchIcon.addGestureRecognizer(singleTap)
+        touchIcon.isUserInteractionEnabled = true
+        self.addSubview(touchIcon)
+    }
+    
+    @objc func tapClick(ges:UITapGestureRecognizer)
+    {
+        verifyTouchID()
     }
     
     var settingType:YKPasswordSettingType = .setting_step_one {
@@ -145,13 +168,163 @@ class YKPasswordSettingView: UIView {
                 dotVs[i].selected = true
             }
         }
+        // 输入的个数ok
+        if (count == 6) {
+            switch settingType {
+            case .setting_step_one:
+                firstPassword = withPass
+                settingType = .setting_step_two
+                password.accept("") // 清空
+                break
+            case .setting_step_two:
+                secondPassword = withPass
+                if (secondPassword == firstPassword) {
+                    // 成功
+                    settingPasswordSuccess(pass: firstPassword)
+                } else {
+                    tipsLabel.text = "两次输入密码不同"
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.7) {
+                        self.settingType = .setting_step_one
+                        self.firstPassword = ""
+                        self.secondPassword = ""
+                        self.password.accept("") // 清空
+                        self.tipsLabel.text = "请重新设置密码"
+                    }
+                }
+                break
+            case .verify:
+                let isSuc = iPassSecure.shared().checkPassword(withPass)
+                if (isSuc) {
+                    // 验证成功
+                    tipsLabel.text = "欢迎进入~"
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.7) {
+                        self.removeFromSuperview()
+                    }
+                } else {
+                    // 验证失败
+                    self.settingType = .verify
+                    self.password.accept("") // 清空
+                    tipsLabel.text = "密码验证失败，请重新输入"
+                }
+                break
+            default:
+                break
+            }
+        }
+    }
+    
+    // 设置密码成功
+    func settingPasswordSuccess(pass:String) {
+        UserDefaults.standard.set(1, forKey: "kYKHasSetPassword")
+        UserDefaults.standard.synchronize()
+        let isSuccess = iPassSecure.shared().setupLoginPass(pass)
+        if isSuccess {
+            tipsLabel.text = "设置密码成功"
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                self.removeFromSuperview()
+            }
+        } else {
+            self.settingType = .verify
+            tipsLabel.text = "密码已设置，请验证"
+        }
     }
     
     func changeState()
     {
-       
+        showPassKeyView()
+        switch settingType {
+        case .setting_step_one:
+            tipsLabel.text = "请设置密码"
+            break
+        case .setting_step_two:
+            tipsLabel.text = "请再次输入密码"
+            break
+        case .verify:
+            tipsLabel.text = "请输入密码验证"
+            break
+        case .touchid:
+            tipsLabel.text = "请验证指纹"
+            showTouchView()
+            break
+        default:
+            break
+        }
     }
     
+    func verifyTouchID(){
+        //1.初始化TouchID句柄
+        let authentication = LAContext()
+        var error: NSError?
+        
+        //2.检查Touch ID是否可用
+        let isAvailable = authentication.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics,
+                                                           error: &error)
+        //3.处理结果
+        if isAvailable
+        {
+            //这里是采用认证策略 LAPolicy.DeviceOwnerAuthenticationWithBiometrics
+            //--> 指纹生物识别方式
+            authentication.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "请验证您的指纹", reply: {
+                //当调用authentication.evaluatePolicy方法后，系统会弹提示框提示用户授权
+                (success, error) -> Void in
+                if success
+                {
+                    DispatchQueue.main.async {
+                        // 验证成功
+                        self.tipsLabel.text = "欢迎进入~"
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                            self.removeFromSuperview()
+                        }
+                    }
+                }
+                else
+                {
+                    if let err = error as? NSError {
+                        if err.code == -1 || err.code == -3 {
+                            // 验证超过次数
+                            DispatchQueue.main.async {
+                                // 验证成功
+                                self.settingType = .verify
+                                self.password.accept("") // 清空
+                            }
+                        }
+                    }
+                }
+            })
+        }
+        else
+        {
+            self.settingType = .verify
+            self.password.accept("") // 清空
+        }
+    }
+    
+    func showTouchView() {
+        touchIcon.isHidden = false
+        for v in dotVs {
+            v.isHidden = true
+        }
+        for v in numButtons {
+            v.isHidden = true
+        }
+        numZeroBtn.isHidden = true
+        cancelBtn.isHidden = true
+        
+        verifyTouchID()
+    }
+    
+    func showPassKeyView()
+    {
+        touchIcon.isHidden = true
+        for v in dotVs {
+            v.isHidden = false
+        }
+        for v in numButtons {
+            v.isHidden = false
+        }
+        numZeroBtn.isHidden = false
+        cancelBtn.isHidden = false
+    }
     
     override func updateConstraints() {
         
@@ -214,6 +387,10 @@ class YKPasswordSettingView: UIView {
             make.top.equalTo(lastView.snp.bottom).offset(offsetY)
             make.width.height.equalTo(keyW)
         }
+        touchIcon.snp.remakeConstraints { (make) in
+            make.center.equalTo(self)
+            make.width.height.equalTo(80)
+        }
         super.updateConstraints()
     }
     
@@ -225,6 +402,55 @@ class YKPasswordSettingView: UIView {
         passSettingView.settingType = type
         YK_KEY_WINDOW?.addSubview(passSettingView)
         kYKSettingPassView = passSettingView
+    }
+}
+
+class YKPasswordSettingConfig {
+    public static let config = YKPasswordSettingConfig()
+    
+    public var isBackground:Bool = false
+    init() {
+        
+    }
+    
+    func isShowingPasswordView() -> Bool {
+        if (kYKSettingPassView != nil) {
+            return true
+        }
+        
+        return false
+    }
+    
+    func firstCheck(){
+        let hasSetPass = UserDefaults.standard.integer(forKey: "kYKHasSetPassword")
+        if (hasSetPass != 1) {
+            // 第一次需要设置密码，之后需要验证密码或者指纹，人脸
+            YKPasswordSettingView.showPasswordSettingViewWith(type: .setting_step_one)
+        }
+    }
+    
+    func checkNeedVerify() {
+        if (!isShowingPasswordView()) {
+            if (isTouchIDEnabled()) {
+                // 验证指纹
+                YKPasswordSettingView.showPasswordSettingViewWith(type: .touchid)
+            } else {
+                YKPasswordSettingView.showPasswordSettingViewWith(type: .verify)
+            }
+        }
+    }
+    func isTouchIDEnabled() -> Bool
+    {
+        //1.初始化TouchID句柄
+        let authentication = LAContext()
+        var error: NSError?
+        
+        //2.检查Touch ID是否可用
+        let isAvailable = authentication.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics,
+                                                           error: &error)
+        
+        //3.处理结果
+        return isAvailable
     }
 }
 
