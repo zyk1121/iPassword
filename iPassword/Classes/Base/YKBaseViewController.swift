@@ -16,6 +16,7 @@ class YKBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = false
         setupNavBar()
     }
     
