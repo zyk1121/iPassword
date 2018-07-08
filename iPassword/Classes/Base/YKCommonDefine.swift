@@ -32,6 +32,8 @@ public let YK_ScreenHeightRate = YK_ScreenHeight / 667.0
 // 警告：不要在主窗口显示之前调用
 public let YK_KEY_WINDOW = UIApplication.shared.delegate?.window ?? UIApplication.shared.keyWindow
 
+public var appNavVC:UIViewController? = nil
+
 // 导航栏返回按钮的颜色
 public let YKNaviBackArrowColor = UIColor.extColorWithHex("323232", alpha: 1.0)
 // App Tab 主色:orange

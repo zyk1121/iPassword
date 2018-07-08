@@ -15,10 +15,18 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         // App主色调
         tabBar.tintColor = YKMainColor
-    
-        self.navigationController?.navigationBar.isHidden = true
         addViewControllers()
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        self.navigationController?.navigationBar.isHidden = true
+//    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        self.navigationController?.navigationBar.isHidden = false
+//    }
     
     private func addViewControllers()
     {
