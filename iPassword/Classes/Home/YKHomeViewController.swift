@@ -20,6 +20,7 @@ class YKHomeViewController: YKBaseViewController {
         super.viewDidLoad()
         hideNavLeftButton()
         setupUI()
+        setLeftNavButton()
         updateViewConstraints()
     }
     
@@ -42,8 +43,19 @@ class YKHomeViewController: YKBaseViewController {
         self.mainView.setupEntity()
     }
     
+    func setLeftNavButton()
+    {
+        let rightButton = UIButton(type: .custom)
+        rightButton.setTitle("备份", for: .normal)
+        rightButton.setTitleColor(YKMainColor, for: .normal)
+        rightButton.addTarget(self, action: #selector(leftNavButtonClick), for: .touchUpInside)
+        let rightItem = UIBarButtonItem(customView: rightButton)
+        self.navigationItem.leftBarButtonItem = rightItem
+    }
     func setRightNavButton() {
-        let rightButton = UIButton(type: .contactAdd)
+        let rightButton = UIButton(type: .custom)
+        rightButton.setTitle("添加", for: .normal)
+        rightButton.setTitleColor(YKMainColor, for: .normal)
         rightButton.addTarget(self, action: #selector(rightNavButtonClick), for: .touchUpInside)
         let rightItem = UIBarButtonItem(customView: rightButton)
         self.navigationItem.rightBarButtonItem = rightItem
@@ -52,6 +64,12 @@ class YKHomeViewController: YKBaseViewController {
     @objc func rightNavButtonClick()
     {
         let vc = YKAddPasswordVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func leftNavButtonClick()
+    {
+        let vc = YKPassSettingViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

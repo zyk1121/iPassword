@@ -46,10 +46,8 @@ extension AppDelegate {
     {
         window = UIWindow(frame: UIScreen.main.bounds)
         let vc = MainViewController()
-//        let nav = YKNavigationViewController(rootViewController: vc)
         window?.rootViewController = vc
         mainVC = vc
-//        appNavVC = vc
         window?.makeKeyAndVisible()
         // 第一次设置密码
         checkPassword()
