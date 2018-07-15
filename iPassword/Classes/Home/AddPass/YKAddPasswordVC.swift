@@ -144,6 +144,17 @@ class YKAddPasswordVC: YKBaseViewController {
             UserDefaults.standard.set(account, forKey: "kYKAddPass_Account")
             UserDefaults.standard.set(pass, forKey: "kYKAddPass_Pass")
             UserDefaults.standard.synchronize()
+            
+            if desc.count > 100 {
+                UserDefaults.standard.removeObject(forKey: "kYKAddPass_Desc")
+            }
+            if account.count > 100 {
+                UserDefaults.standard.removeObject(forKey: "kYKAddPass_Account")
+            }
+            if pass.count > 20 {
+                UserDefaults.standard.removeObject(forKey: "kYKAddPass_Pass")
+            }
+            UserDefaults.standard.synchronize()
         }
         
         super.popBack()
