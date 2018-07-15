@@ -16,6 +16,7 @@ import RxSwift
 class YKHomeViewController: YKBaseViewController {
 
     private let mainView:YKQuestionLibMainView = YKQuestionLibMainView()
+    private let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         hideNavLeftButton()
@@ -28,6 +29,9 @@ class YKHomeViewController: YKBaseViewController {
         setRightNavButton()
         self.view.addSubview(mainView)
         mainView.parentVC = self
+        NotificationCenter.default.rx.notification(Notification.Name.init("kYKReloadPasswordData")).subscribe {[weak self] (event) in
+            self?.loadData()
+        }.disposed(by: disposeBag)
     }
     
     override func updateViewConstraints() {

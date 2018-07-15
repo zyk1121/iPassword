@@ -36,4 +36,8 @@
 - (BOOL)deleteItem:(iPassSecureData *)item;
 - (NSArray<iPassSecureData *> *)getAllData;
 
+// 文件相关
+- (BOOL)checkFilePassword:(NSString *)filePath;
+- (BOOL)replaceWithFile:(NSString *)filePath;
+
 @end

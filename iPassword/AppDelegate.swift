@@ -38,6 +38,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
        
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if url.isFileURL {
+            // /private/var/mobile/Containers/Data/Application/79D83636-D136-4F73-B388-64898F1A3F14/tmp/com.zhangyuanke.iPassword-Inbox/iPass 2.data
+            if (iPassSecure.shared().checkFilePassword(url.path)) {
+                
+                if (iPassSecure.shared().replace(withFile: url.path)) {
+                    CBToast.showToastAction(message: "导入成功~")
+                    NotificationCenter.default.post(name: NSNotification.Name.init("kYKReloadPasswordData"), object: nil)
+                }
+            } else {
+                let alertView = UIAlertView(title: "导入失败", message: "导入文件密码和现在的不一致，不能导入~", delegate: nil, cancelButtonTitle: "确定")
+                alertView.show()
+//                CBToast.showToastAction(message: "导入文件密码和现在的不一致，不能导入~")
+            }
+        }
+        return true
+    }
 }
 
 extension AppDelegate {

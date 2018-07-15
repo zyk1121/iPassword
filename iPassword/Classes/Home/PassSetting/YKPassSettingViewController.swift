@@ -36,7 +36,8 @@ class YKPassSettingViewController: YKBaseViewController {
             documentController = UIDocumentInteractionController.init(url: URL(fileURLWithPath: filePath))
             //        documentController.delegate = self
             //        documentController.UTI = "com.adobe.pdf"
-            documentController.uti = "public.text"
+            // public.data
+            documentController.uti = "public.text" // public.data
             documentController.presentOpenInMenu(from: .zero, in: self.view, animated: true)
         } else {
              // 不存在
