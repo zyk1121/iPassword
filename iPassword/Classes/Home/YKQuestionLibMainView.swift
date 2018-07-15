@@ -13,7 +13,7 @@ import RxCocoa
 
 class YKQuestionLibMainView: UIView {
     
-    public weak var questionLibVC:YKHomeViewController?
+    public weak var parentVC:YKHomeViewController?
     
     public var dataArrs:[iPassSecureData] = []
     
@@ -109,7 +109,9 @@ extension YKQuestionLibMainView:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        let vc = YKShowPasswordVC()
+        vc.data = self.dataArrs[indexPath.row]
+        self.parentVC?.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

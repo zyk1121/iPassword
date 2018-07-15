@@ -26,6 +26,7 @@ class YKHomeViewController: YKBaseViewController {
     func setupUI() {
         setRightNavButton()
         self.view.addSubview(mainView)
+        mainView.parentVC = self
     }
     
     override func updateViewConstraints() {
