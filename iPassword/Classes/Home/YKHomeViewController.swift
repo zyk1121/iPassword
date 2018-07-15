@@ -15,15 +15,30 @@ import RxSwift
 
 class YKHomeViewController: YKBaseViewController {
 
+    private let mainView:YKQuestionLibMainView = YKQuestionLibMainView()
     override func viewDidLoad() {
         super.viewDidLoad()
         hideNavLeftButton()
         setupUI()
+        updateViewConstraints()
     }
     
     func setupUI() {
         setRightNavButton()
+        self.view.addSubview(mainView)
+    }
+    
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
         
+        mainView.snp.remakeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
+    }
+    
+    func loadData()
+    {
+        self.mainView.setupEntity()
     }
     
     func setRightNavButton() {
@@ -43,6 +58,7 @@ class YKHomeViewController: YKBaseViewController {
         super.viewWillAppear(animated)
         // 验证密码
         YKPasswordSettingConfig.config.checkNeedVerify()
+        self.loadData()
     }
 }
 
