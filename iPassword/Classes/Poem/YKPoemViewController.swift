@@ -15,14 +15,4 @@ class YKPoemViewController: YKBaseViewController {
         hideNavLeftButton()
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.hidesBottomBarWhenPushed = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.hidesBottomBarWhenPushed = false
-    }
 }

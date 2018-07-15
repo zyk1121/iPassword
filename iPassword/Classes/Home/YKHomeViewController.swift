@@ -36,25 +36,13 @@ class YKHomeViewController: YKBaseViewController {
     @objc func rightNavButtonClick()
     {
         let vc = YKAddPasswordVC()
-         self.navigationController?.pushViewController(vc, animated: true)
-        /*
-//        self.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
-//        self.hidesBottomBarWhenPushed = false
- */
-//        appNavVC?.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.hidesBottomBarWhenPushed = true
         // 验证密码
         YKPasswordSettingConfig.config.checkNeedVerify()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.hidesBottomBarWhenPushed = false
     }
 }
 

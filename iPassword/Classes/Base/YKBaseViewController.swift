@@ -64,6 +64,24 @@ class YKBaseViewController: UIViewController {
         popBack()
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        if let count = self.navigationController?.viewControllers.count {
+//            if count == 1 {
+//                self.hidesBottomBarWhenPushed = true
+//            }
+//        }
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        if let count = self.navigationController?.viewControllers.count {
+//            if count == 1 {
+//                self.hidesBottomBarWhenPushed = false
+//            }
+//        }
+//    }
+    
     @objc open func popBack() {
         if let vcs = self.navigationController?.viewControllers ,  vcs.count > 1 {
             self.navigationController!.popViewController(animated: true)
