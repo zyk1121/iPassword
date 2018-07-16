@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    weak var mainVC:MainViewController?
+    weak var mainVC:UIViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         showMainVC()
@@ -63,8 +63,11 @@ extension AppDelegate {
     func showMainVC()
     {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = MainViewController()
-        window?.rootViewController = vc
+//        let vc = MainViewController()
+//        window?.rootViewController = vc
+        let vc = YKHomeViewController()
+        let nav = YKNavigationViewController(rootViewController: vc)
+        window?.rootViewController = nav
         mainVC = vc
         window?.makeKeyAndVisible()
         // 第一次设置密码

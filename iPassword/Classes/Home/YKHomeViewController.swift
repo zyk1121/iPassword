@@ -26,6 +26,7 @@ class YKHomeViewController: YKBaseViewController {
     }
     
     func setupUI() {
+        setTitle(title: "密码助手")
         setRightNavButton()
         self.view.addSubview(mainView)
         mainView.parentVC = self

@@ -430,10 +430,11 @@ class YKPasswordSettingConfig {
     }
     
     func checkNeedVerify() {
+        // add by zyk 后续放开Tabbar需求修改
         var tabBarSelectIndex:Int = 0
-        if let appDel = UIApplication.shared.delegate as? AppDelegate,let mainVC = appDel.mainVC {
-            tabBarSelectIndex = mainVC.selectedIndex
-        }
+//        if let appDel = UIApplication.shared.delegate as? AppDelegate,let mainVC = appDel.mainVC {
+//            tabBarSelectIndex = mainVC.selectedIndex
+//        }
         
         if (!isShowingPasswordView() && backgroundMode && tabBarSelectIndex == 0) {
             if (isTouchIDEnabled()) {
