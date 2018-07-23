@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AipBase
+import AipOcrSdk
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         showMainVC()
+        configOCR()
         return true
     }
 
@@ -32,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        YKPasswordSettingConfig.config.checkNeedVerify()
+//        YKPasswordSettingConfig.config.checkNeedVerify()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -65,7 +68,7 @@ extension AppDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
 //        let vc = MainViewController()
 //        window?.rootViewController = vc
-        let vc = YKHomeViewController()
+        let vc = YKPhotoViewController()
         let nav = YKNavigationViewController(rootViewController: vc)
         window?.rootViewController = nav
         mainVC = vc
@@ -77,6 +80,19 @@ extension AppDelegate {
     func checkPassword()
     {
         // 第一次设置
-        YKPasswordSettingConfig.config.firstCheck()
+//        YKPasswordSettingConfig.config.firstCheck()
+    }
+    
+    func configOCR()
+    {
+        if let licenseFile = Bundle.main.path(forResource: "aip", ofType: "license") {
+            let url = URL(fileURLWithPath: licenseFile)
+            if let licenseFileData = try? Data(contentsOf: url) {
+                AipOcrService.shard().auth(withLicenseFileData: licenseFileData)
+            } else {
+                let alertView = UIAlertView(title: "授权失败", message: "授权文件不存在", delegate: nil, cancelButtonTitle: "确定")
+                alertView.show()
+            }
+        }
     }
 }

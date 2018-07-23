@@ -39,6 +39,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>访问相机，这将使我拥有视觉</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>帮你处理照片、存储截取的图片</string>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
