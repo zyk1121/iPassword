@@ -21,7 +21,27 @@ class YKPhotoViewController: YKBaseViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
-        test()
+        test2()
+    }
+    
+    func test2()
+    {
+        if let vc = AipGeneralVC.viewController(handler: { (image) in
+            let options = ["language_type":"CHN_ENG","detect_direction":"true"]
+            AipOcrService.shard().detectText(from: image, withOptions: options, successHandler: { (value) in
+                DispatchQueue.main.async {
+                    self.processSuccess(dic: (value as? [String:Any]) ?? [:])
+                }
+            }, failHandler: { (error) in
+                if let err = error {
+                    DispatchQueue.main.async {
+                        self.processError(error: err)
+                    }
+                }
+            })
+        }) {
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     func test()
@@ -47,6 +67,15 @@ class YKPhotoViewController: YKBaseViewController {
     func processSuccess(dic:[String:Any]) {
         self.dismiss(animated: true, completion: nil)
         var words:String = ""
+        print(dic)
+        /*
+         location =     {
+         height = 35;
+         left = 38;
+         top = 723;
+         width = 548;
+         };
+         */
         if let words_result = dic["words_result"] as? [[String:Any]] {
             for item in words_result {
                 if let word = item["words"] as? String {
