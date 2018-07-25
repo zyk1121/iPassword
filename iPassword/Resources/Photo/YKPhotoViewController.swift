@@ -9,6 +9,7 @@
 import UIKit
 import AipBase
 import AipOcrSdk
+import SSZipArchive
 
 class YKPhotoViewController: YKBaseViewController {
     public weak var maskView:UIView?
@@ -19,13 +20,21 @@ class YKPhotoViewController: YKBaseViewController {
         super.viewDidLoad()
         hideNavLeftButton()
         setTitle(title: "文字识别")
-        mainView.frame = CGRect(x: 0, y: 5, width: YK_ScreenWidth, height: 100)
+        mainView.frame = CGRect(x: 0, y: 5, width: YK_ScreenWidth, height: 200)
         self.view.addSubview(mainView)
         mainView.parentVC = self
         mainView.setupEntity()
-        imageView.frame = CGRect(x: 0, y: 105, width: YK_ScreenWidth, height: YK_ScreenWidth / 2 * 3)
+        imageView.frame = CGRect(x: 0, y: 205, width: YK_ScreenWidth, height: YK_ScreenWidth / 2 * 3)
         self.view.addSubview(imageView)
         imageView.isHidden = true
+        setupFiles()
+    }
+    
+    // 创建文件夹
+    func setupFiles()
+    {
+        let dir = "\(NSHomeDirectory())/Documents/data";
+        try? FileManager.default.createDirectory(atPath: dir, withIntermediateDirectories: true, attributes: nil)
     }
     
     func showMaskView()
@@ -109,6 +118,72 @@ class YKPhotoViewController: YKBaseViewController {
         }
     }
     
+    func exportFiles()
+    {
+        let dir = "\(NSHomeDirectory())/Documents/data"
+        if !FileManager.default.fileExists(atPath: dir) {
+            self.setupFiles()
+        }
+        if let contents = try? FileManager.default.contentsOfDirectory(atPath: dir) {
+            if contents.count > 0 {
+                // 有数据
+                let zipFile = "\(NSHomeDirectory())/Documents/Data.zip"
+                try? FileManager.default.removeItem(atPath: zipFile)
+                // 压缩
+                if SSZipArchive.createZipFile(atPath: zipFile, withContentsOfDirectory: dir) {
+                    // 压缩成功
+                    let alertVC = UIAlertController(title: "导出文件", message: "确定要导出吗？", preferredStyle: .alert)
+                    alertVC.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (alert) in
+                        
+                    }))
+                    alertVC.addAction(UIAlertAction(title: "确定", style: .default, handler: {[weak self] (alert) in
+                        self?.exportZipFile()
+                    }))
+                    self.present(alertVC, animated: true, completion: nil)
+                }
+            } else {
+                // UserDefaults.standard.integer(forKey: "kYKFilesKey")
+                UserDefaults.standard.set(1, forKey: "kYKFilesKey")
+                UserDefaults.standard.synchronize()
+                CBToast.showToastAction(message: "当前还没有文件，不能导出~")
+            }
+        }
+    }
+    
+    func delFiles()
+    {
+        let alertVC = UIAlertController(title: "删除文件", message: "确定要删除吗？", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (alert) in
+            
+        }))
+        alertVC.addAction(UIAlertAction(title: "确定", style: .default, handler: { (alert) in
+            // 有数据
+            let zipFile = "\(NSHomeDirectory())/Documents/Data.zip"
+            try? FileManager.default.removeItem(atPath: zipFile)
+            //
+            let dir = "\(NSHomeDirectory())/Documents/data"
+            try? FileManager.default.removeItem(atPath: dir)
+            UserDefaults.standard.set(1, forKey: "kYKFilesKey")
+            UserDefaults.standard.synchronize()
+            CBToast.showToastAction(message: "删除文件成功~")
+        }))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func exportZipFile()
+    {
+        let zipFile = "\(NSHomeDirectory())/Documents/Data.zip"
+        if FileManager.default.fileExists(atPath: zipFile) {
+            // 导出
+            let documentController = UIDocumentInteractionController.init(url: URL(fileURLWithPath: zipFile))
+            //        documentController.delegate = self
+            //        documentController.UTI = "com.adobe.pdf"
+            // public.data
+            documentController.uti = "public.data" // public.data
+            documentController.presentOpenInMenu(from: .zero, in: self.view, animated: true)
+        }
+    }
+    
 //    func test_test(image:UIImage?) {
 //        self.dismiss(animated: true, completion: nil)
 //        self.imageView.image = image
@@ -174,7 +249,7 @@ class YKPhotoViewController: YKBaseViewController {
 class YKPhotoMainView: UIView {
     
     public weak var parentVC:YKPhotoViewController? = nil
-    public var dataArrs:[String] = ["识别所有文字","识别红色下划线文字"]
+    public var dataArrs:[String] = ["识别所有文字","识别红色下划线文字","导出文件","清空本地文件"]
     
     public let mainTableView:UITableView = {
         let tableView = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
@@ -253,6 +328,10 @@ extension YKPhotoMainView:UITableViewDelegate,UITableViewDataSource {
             self.parentVC?.commonTextRecognize()
         } else if (indexPath.row == 1) {
             self.parentVC?.redLineTextRecognize()
+        } else if (indexPath.row == 2) {
+            self.parentVC?.exportFiles()
+        } else if (indexPath.row == 3) {
+            self.parentVC?.delFiles()
         }
     }
 }
