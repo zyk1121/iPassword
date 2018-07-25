@@ -27,6 +27,7 @@ class YKTextShowViewController: YKBaseViewController {
         textView.backgroundColor = UIColor.white
         textView.frame = CGRect(x: 0, y: 0, width: YK_ScreenWidth, height: YK_ScreenHeight - YK_NavHeight)
         textView.text = words
+        textView.isEditable = false
         self.view.addSubview(textView)
     }
     
