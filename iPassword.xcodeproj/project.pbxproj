@@ -59,9 +59,36 @@
 		76ACC39820FAF43F00807290 /* empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76ACC39720FAF43F00807290 /* empty@3x.png */; };
 		76ACC39B20FAF73200807290 /* YKShowPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ACC39A20FAF73200807290 /* YKShowPasswordVC.swift */; };
 		76ACC39E20FAFC0900807290 /* YKPassSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ACC39D20FAFC0900807290 /* YKPassSettingViewController.swift */; };
+		76D2E7742105FBD200468054 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D2E7712105FBD200468054 /* AipOcrSdk.framework */; };
+		76D2E7752105FBD200468054 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D2E7722105FBD200468054 /* AipBase.framework */; };
+		76D2E7762105FBD200468054 /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D2E7732105FBD200468054 /* IdcardQuality.framework */; };
+		76D2E7772105FBDE00468054 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D2E7712105FBD200468054 /* AipOcrSdk.framework */; };
+		76D2E7782105FBDE00468054 /* AipOcrSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76D2E7712105FBD200468054 /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76D2E7792105FBDE00468054 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D2E7722105FBD200468054 /* AipBase.framework */; };
+		76D2E77A2105FBDE00468054 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76D2E7722105FBD200468054 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76D2E77B2105FBDE00468054 /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D2E7732105FBD200468054 /* IdcardQuality.framework */; };
+		76D2E77C2105FBDE00468054 /* IdcardQuality.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76D2E7732105FBD200468054 /* IdcardQuality.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76D2E77F2105FD7E00468054 /* aip.license in Resources */ = {isa = PBXBuildFile; fileRef = 76D2E77E2105FD7E00468054 /* aip.license */; };
+		76E1426C21060C8C00DC04ED /* YKTextShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1426B21060C8C00DC04ED /* YKTextShowViewController.swift */; };
 		76EF58A320EA7125001E5E43 /* YKPasswordSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF58A220EA7125001E5E43 /* YKPasswordSettingView.swift */; };
 		AEA3D46006EE7B6C08A7B5E1 /* Pods_iPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9278C8E2FE4341D2C7887C /* Pods_iPassword.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76D2E77D2105FBDF00468054 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				76D2E77A2105FBDE00468054 /* AipBase.framework in Embed Frameworks */,
+				76D2E7782105FBDE00468054 /* AipOcrSdk.framework in Embed Frameworks */,
+				76D2E77C2105FBDE00468054 /* IdcardQuality.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4C9278C8E2FE4341D2C7887C /* Pods_iPassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +149,11 @@
 		76ACC39720FAF43F00807290 /* empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty@3x.png"; sourceTree = "<group>"; };
 		76ACC39A20FAF73200807290 /* YKShowPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKShowPasswordVC.swift; sourceTree = "<group>"; };
 		76ACC39D20FAFC0900807290 /* YKPassSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPassSettingViewController.swift; sourceTree = "<group>"; };
+		76D2E7712105FBD200468054 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
+		76D2E7722105FBD200468054 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
+		76D2E7732105FBD200468054 /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
+		76D2E77E2105FD7E00468054 /* aip.license */ = {isa = PBXFileReference; lastKnownFileType = file; path = aip.license; sourceTree = "<group>"; };
+		76E1426B21060C8C00DC04ED /* YKTextShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKTextShowViewController.swift; sourceTree = "<group>"; };
 		76EF58A220EA7125001E5E43 /* YKPasswordSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPasswordSettingView.swift; sourceTree = "<group>"; };
 		C2AC88992134EF70FE0FE8E2 /* Pods-iPassword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.release.xcconfig"; sourceTree = "<group>"; };
 		E01544F1226995D380ADF276 /* Pods-iPassword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPassword/Pods-iPassword.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,10 +167,16 @@
 				76138EE520E922750006A086 /* LocalAuthentication.framework in Frameworks */,
 				76138EB420E87E370006A086 /* MobileCoreServices.framework in Frameworks */,
 				76138EB220E87E2D0006A086 /* libz.tbd in Frameworks */,
+				76D2E7752105FBD200468054 /* AipBase.framework in Frameworks */,
 				76138EB020E87E050006A086 /* Security.framework in Frameworks */,
+				76D2E7762105FBD200468054 /* IdcardQuality.framework in Frameworks */,
+				76D2E7792105FBDE00468054 /* AipBase.framework in Frameworks */,
 				76138EAE20E87DFA0006A086 /* libstdc++.tbd in Frameworks */,
+				76D2E77B2105FBDE00468054 /* IdcardQuality.framework in Frameworks */,
+				76D2E7772105FBDE00468054 /* AipOcrSdk.framework in Frameworks */,
 				AEA3D46006EE7B6C08A7B5E1 /* Pods_iPassword.framework in Frameworks */,
 				76138EA720E87D170006A086 /* libiPassSecure.a in Frameworks */,
+				76D2E7742105FBD200468054 /* AipOcrSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +255,8 @@
 		76138EA320E87D170006A086 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76D2E77E2105FD7E00468054 /* aip.license */,
+				76D2E7702105FBD200468054 /* lib */,
 				76138EE420E922750006A086 /* LocalAuthentication.framework */,
 				76138EB320E87E370006A086 /* MobileCoreServices.framework */,
 				76138EB120E87E2C0006A086 /* libz.tbd */,
@@ -282,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				76138EE020E8D1B70006A086 /* YKPhotoViewController.swift */,
+				76E1426B21060C8C00DC04ED /* YKTextShowViewController.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -348,6 +389,16 @@
 			path = PassSetting;
 			sourceTree = "<group>";
 		};
+		76D2E7702105FBD200468054 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				76D2E7712105FBD200468054 /* AipOcrSdk.framework */,
+				76D2E7722105FBD200468054 /* AipBase.framework */,
+				76D2E7732105FBD200468054 /* IdcardQuality.framework */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		920B206C33B54CCA70D445E9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +429,7 @@
 				76138E8120E8788C0006A086 /* Resources */,
 				2E6A923485B0B17C13BB356C /* [CP] Embed Pods Frameworks */,
 				76138EB520E8A8660006A086 /* ShellScript */,
+				76D2E77D2105FBDF00468054 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -446,6 +498,7 @@
 				76138ED320E8D0700006A086 /* tabbar_compose_icon_add_highlighted@3x.png in Resources */,
 				76138ED820E8D0700006A086 /* tabbar_discover@3x.png in Resources */,
 				76ACC38E20FAF27200807290 /* exercise@3x.png in Resources */,
+				76D2E77F2105FD7E00468054 /* aip.license in Resources */,
 				76138E9120E8788D0006A086 /* LaunchScreen.storyboard in Resources */,
 				76138ECC20E8D0700006A086 /* tabbar_discover_highlighted@3x.png in Resources */,
 				76ACC39520FAF27200807290 /* icon_grade@3x.png in Resources */,
@@ -547,6 +600,7 @@
 				76138EA220E87BDB0006A086 /* YKBaseView.swift in Sources */,
 				76ACC38020FAF0A400807290 /* YKCourseTableViewCell.swift in Sources */,
 				76138EE120E8D1B70006A086 /* YKPhotoViewController.swift in Sources */,
+				76E1426C21060C8C00DC04ED /* YKTextShowViewController.swift in Sources */,
 				76EF58A320EA7125001E5E43 /* YKPasswordSettingView.swift in Sources */,
 				76138EE320E8D1CA0006A086 /* YKPoemViewController.swift in Sources */,
 				76ACC39B20FAF73200807290 /* YKShowPasswordVC.swift in Sources */,
@@ -690,6 +744,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VMTN98C772;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iPassword/Frameworks/lib",
+				);
 				INFOPLIST_FILE = iPassword/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -732,6 +790,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VMTN98C772;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iPassword/Frameworks/lib",
+				);
 				INFOPLIST_FILE = iPassword/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
