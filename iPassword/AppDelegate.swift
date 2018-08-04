@@ -54,7 +54,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } else {
                 let alertView = UIAlertView(title: "导入失败", message: "导入文件密码和现在的不一致，不能导入~", delegate: nil, cancelButtonTitle: "确定")
                 alertView.show()
-//                CBToast.showToastAction(message: "导入文件密码和现在的不一致，不能导入~")
             }
         }
         return true
